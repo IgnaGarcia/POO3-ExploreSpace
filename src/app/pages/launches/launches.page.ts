@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Launch } from 'src/app/models/launch.model';
 import { SpaceXService } from '../../services/spacex.service'
 
 @Component({
@@ -14,7 +15,7 @@ export class LaunchesPage {
     }
 
     ngOnInit() {
-        return this._spaceXService.getUpcomingLaunches().subscribe((res: {}) => {
+        return this._spaceXService.getUpcomingLaunches().subscribe((res: Array<Launch>) => {
             console.log(res)
         })
     }

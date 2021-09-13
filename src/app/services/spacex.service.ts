@@ -19,6 +19,22 @@ export class SpaceXService {
             )
     }
 
+    getLatestLaunches(): Observable<Launch> {
+        return this.http.get<Launch>(this.URL + '/launches/latest')
+            .pipe(
+                retry(1),
+                catchError(this.processError)
+            )
+    }
+
+    getAllLaunches(): Observable<Array<Launch>> {
+        return this.http.get<Array<Launch>>(this.URL + '/launches')
+            .pipe(
+                retry(1),
+                catchError(this.processError)
+            )
+    }
+
     processError(err: any) {
         let message = err.error instanceof ErrorEvent ?
             err.error.message
