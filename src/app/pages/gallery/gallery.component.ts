@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Apod } from 'src/app/models/apod.model';
 import { ApodService } from '../../services/apod.service'
 
 @Component({
     selector: 'gallery-page',
-    templateUrl: './gallery.page.html',
-    styleUrls: ['./gallery.page.sass']
+    templateUrl: './gallery.component.html',
+    styleUrls: ['./gallery.component.scss']
 })
-export class GaleryPage {
+export class GalleryComponent {
     last_end: string;
     last_start: string;
     gallery: Array<Apod>;
@@ -26,7 +26,7 @@ export class GaleryPage {
     }
 
     sub10Days(end_date: number): Date {
-        return new Date(end_date - (10 * 24 * 60 * 60 * 1000));
+        return new Date(end_date - (11 * 24 * 60 * 60 * 1000));
     }
 
     dateToString(date: Date): string {

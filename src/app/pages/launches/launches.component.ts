@@ -4,11 +4,11 @@ import { SpaceXService } from '../../services/spacex.service'
 
 @Component({
     selector: 'launches-page',
-    templateUrl: './launches.page.html',
-    styleUrls: ['./launches.page.sass']
+    templateUrl: './launches.component.html',
+    styleUrls: ['./launches.component.scss']
 })
 
-export class LaunchesPage {
+export class LaunchesComponent {
 
     constructor(private _spaceXService: SpaceXService) {
         console.log('load launches page');

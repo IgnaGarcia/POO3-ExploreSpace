@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'calendar-page',
-    templateUrl: './calendar.page.html',
-    styleUrls: ['./calendar.page.sass']
+    templateUrl: './calendar.component.html',
+    styleUrls: ['./calendar.component.scss']
 })
 
-export class CalendarPage {
+export class CalendarComponent {
 
     constructor() {
         console.log('load calendar page');

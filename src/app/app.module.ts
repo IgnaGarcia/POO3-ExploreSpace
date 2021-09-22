@@ -6,19 +6,28 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GaleryPage } from './pages/gallery/gallery.page';
+
+import { IndexModule } from './pages/index/index.module';
+import { LaunchesModule } from './pages/launches/launches.module';
+import { GaleryModule } from './pages/gallery/gallery.module';
+import { SpaceXModule } from './pages/spaceX/spacex.module';
+import { NotFoundModule } from './pages/notFound/notFount.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GaleryPage
+    AppComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IndexModule,
+    LaunchesModule,
+    SpaceXModule,
+    GaleryModule,
+    NotFoundModule
   ],
   providers: [],
   bootstrap: [AppComponent]

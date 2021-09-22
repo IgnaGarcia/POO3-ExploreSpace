@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { IndexPage } from './pages/index/index.page';
-import { GaleryPage } from './pages/gallery/gallery.page';
-import { CalendarPage } from './pages/calendar/calendar.page';
-import { LaunchesPage } from './pages/launches/launches.page';
-import { SpaceXPage } from './pages/spaceX/spacex.page';
-import { NotFoundPage } from './pages/notFound/notFound.page';
+import { IndexComponent } from './pages/index/index.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { CalendarComponent } from './pages/calendar/calendar.component';
+import { LaunchesComponent } from './pages/launches/launches.component';
+import { SpaceXComponent } from './pages/spaceX/spacex.component';
+import { NotFoundComponent } from './pages/notFound/notFound.component';
 
 const routes: Routes = [
-  { path: 'inicio', component: IndexPage },
-  { path: 'galeria', component: GaleryPage },
-  { path: 'calendario', component: CalendarPage },
-  { path: 'lanzamientos', component: LaunchesPage },
-  { path: 'spacex', component: SpaceXPage },
+  { path: 'inicio', component: IndexComponent },
+  { path: 'galeria', component: GalleryComponent },
+  { path: 'calendario', component: CalendarComponent },
+  { path: 'lanzamientos', component: LaunchesComponent },
+  { path: 'spacex', component: SpaceXComponent },
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
-  { path: '**', component: NotFoundPage }
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'index-page',
-    templateUrl: './index.page.html',
-    styleUrls: ['./index.page.sass']
+    templateUrl: './index.component.html',
+    styleUrls: ['./index.component.scss']
 })
 
-export class IndexPage {
+export class IndexComponent {
 
     constructor() {
         console.log('load index page');
