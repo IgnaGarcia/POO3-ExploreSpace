@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./spacex.page.sass']
 })
 
-export class SpaceXPage{
+export class SpaceXPage {
 
-    constructor(){
+    constructor() {
         console.log('load spaceX page');
     }
 }

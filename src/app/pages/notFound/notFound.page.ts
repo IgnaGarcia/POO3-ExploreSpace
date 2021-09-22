@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./notFound.page.sass']
 })
 
-export class NotFoundPage{
+export class NotFoundPage {
 
-    constructor(){
+    constructor() {
         console.log('load galery page');
     }
 }

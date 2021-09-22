@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./calendar.page.sass']
 })
 
-export class CalendarPage{
+export class CalendarPage {
 
-    constructor(){
+    constructor() {
         console.log('load calendar page');
     }
 }

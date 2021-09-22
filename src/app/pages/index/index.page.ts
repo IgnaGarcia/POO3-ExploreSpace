@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./index.page.sass']
 })
 
-export class IndexPage{
+export class IndexPage {
 
-    constructor(){
+    constructor() {
         console.log('load index page');
     }
 }
