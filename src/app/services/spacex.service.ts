@@ -10,6 +10,8 @@ import { Crew } from '../models/crew.model';
 import { Dragon } from '../models/dragon.model';
 import { Company } from '../models/company.model';
 import { StarLink } from '../models/starlink.model';
+import { Launchpad } from '../models/launchpad.model';
+import { Landpad } from '../models/landpad.model';
 
 @Injectable({ providedIn: 'root' })
 export class SpaceXService {
@@ -82,20 +84,20 @@ export class SpaceXService {
     }
 
     /* LAUNCHPADS */
-    getAllLaunchpads(): Observable<Array<Dragon>> {
+    getAllLaunchpads(): Observable<Array<Launchpad>> {
         return this.get(env.launchpads);
     }
 
-    getLaunchpad(launchpad: string): Observable<Dragon> {
+    getLaunchpad(launchpad: string): Observable<Launchpad> {
         return this.get(`${env.launchpads}/${launchpad}`);
     }
 
     /* LANDPADS */
-    getAllLandpads(): Observable<Array<Dragon>> {
+    getAllLandpads(): Observable<Array<Landpad>> {
         return this.get(env.landpads);
     }
 
-    getLandpad(landpad: string): Observable<Dragon> {
+    getLandpad(landpad: string): Observable<Landpad> {
         return this.get(`${env.landpads}/${landpad}`);
     }
 

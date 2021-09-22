@@ -6,25 +6,25 @@ import { StarLink } from 'src/app/models/starlink.model';
 import { Crew } from 'src/app/models/crew.model';
 import { Rocket } from 'src/app/models/rocket.model';
 import { Dragon } from 'src/app/models/dragon.model';
+import { Base } from 'src/app/models/base.model';
 
 @Component({
     selector: 'spaceX-page',
     templateUrl: './spacex.component.html',
     styleUrls: ['./spacex.component.scss']
 })
-
 export class SpaceXComponent {
     company: Company;
     inactiveStarlink: StarLink;
     activeStarlink: StarLink;
-    bases: any;
+    bases: Array<Base>;
     crew: Array<Crew>;
     rockets: Array<Rocket>;
     dragons: Array<Dragon>;
 
     constructor(private _spaceXService: SpaceXService) {
         console.log('load spaceX page');
-        this.bases = new Array<any>();
+        this.bases = new Array<Base>();
         this.crew = new Array<Crew>();
         this.rockets = new Array<Rocket>();
         this.dragons = new Array<Dragon>();
@@ -38,9 +38,9 @@ export class SpaceXComponent {
         this._spaceXService.getActiveStarlinks().subscribe((res: StarLink) => this.inactiveStarlink = res)
         this._spaceXService.getInactiveStarlinks().subscribe((res: StarLink) => this.activeStarlink = res)
 
-        // TODO: Bases 
-        this._spaceXService.getAllLandpads().subscribe((res: any) => this.bases.push(...res));
-        this._spaceXService.getAllLaunchpads().subscribe((res: any) => this.bases.push(...res))
+        // Bases 
+        this._spaceXService.getAllLandpads().subscribe((res: Array<Base>) => this.bases.push(...res));
+        this._spaceXService.getAllLaunchpads().subscribe((res: Array<Base>) => this.bases.push(...res))
 
         // Dragons
         this._spaceXService.getAllDragons().subscribe((res: Array<Dragon>) => this.dragons.push(...res))

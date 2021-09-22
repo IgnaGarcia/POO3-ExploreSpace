@@ -7,7 +7,7 @@ import { SpaceXComponent } from './spacex.component';
   declarations: [
     SpaceXComponent
   ],
-  imports: [],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [SpaceXComponent]
 })

@@ -1,0 +1,10 @@
+<h1>SPACE X</h1>
+<ul> 
+    <li> Bases: {{ bases.length }} </li>
+    <li> Astronautas: {{ crew.length }} </li>
+    <li> Cohetes: {{ rockets.length }} </li>
+    <li> Dragones: {{ dragons.length }} </li>
+    <li *ngIf="activeStarlink != undefined"> Starlink Activos: {{ activeStarlink.totalDocs }} </li>
+    <li *ngIf="inactiveStarlink != undefined"> Starlink Inactivos: {{ inactiveStarlink.totalDocs }} </li>
+    <li> Compania: {{ company }} </li>
+</ul>
