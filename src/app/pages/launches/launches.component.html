@@ -1,0 +1,5 @@
+<h1>LANZAMIENTO</h1>
+<ul> 
+    <li> Count: {{ launches.length }} </li>
+    <li *ngIf="lastLaunch != undefined"> Last launch: {{ lastLaunch.flight_number }} - {{ lastLaunch.name }} - {{ lastLaunch.date_local }}  </li>
+</ul>
