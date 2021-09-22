@@ -103,39 +103,31 @@ export class SpaceXService {
 
     /* STARLINK */
     getActiveStarlinks(): Observable<StarLink> {
-        let body = JSON.stringify({
+        return this.post(env.starlink, {
             "query": {
                 "latitude": {
                     "$ne": null
                 }
             },
             "options": {
-                "pagination": false,
                 "select": {
-                    "latitude": 1,
-                    "longitude": 1,
-                    "height_km": 1,
-                    "velocity_kms": 1,
                     "launch": 1
                 }
             }
         });
-        return this.post(env.starlink, body);
     }
 
     getInactiveStarlinks(): Observable<StarLink> {
-        let body = JSON.stringify({
+        return this.post(env.starlink, {
             "query": {
                 "latitude": null
             },
             "options": {
-                "pagination": false,
                 "select": {
                     "launch": 1
                 }
             }
         });
-        return this.post(env.starlink, body);
     }
 
     /* COMPANY */

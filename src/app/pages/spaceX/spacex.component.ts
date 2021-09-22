@@ -35,8 +35,8 @@ export class SpaceXComponent {
         this._spaceXService.getCompanyData().subscribe((res: Company) => this.company = res)
 
         // Starlink
-        this._spaceXService.getActiveStarlinks().subscribe((res: StarLink) => this.inactiveStarlink = res)
-        this._spaceXService.getInactiveStarlinks().subscribe((res: StarLink) => this.activeStarlink = res)
+        this._spaceXService.getActiveStarlinks().subscribe((res: StarLink) => this.activeStarlink = res)
+        this._spaceXService.getInactiveStarlinks().subscribe((res: StarLink) => this.inactiveStarlink = res)
 
         // Bases 
         this._spaceXService.getAllLandpads().subscribe((res: Array<Base>) => this.bases.push(...res));
