@@ -11,6 +11,7 @@ import { IndexModule } from './pages/index/index.module';
 import { LaunchesModule } from './pages/launches/launches.module';
 import { GaleryModule } from './pages/gallery/gallery.module';
 import { SpaceXModule } from './pages/spaceX/spacex.module';
+import { CalendarModule } from './pages/calendar/calendar.module';
 import { NotFoundModule } from './pages/notFound/notFount.module';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { NotFoundModule } from './pages/notFound/notFount.module';
     LaunchesModule,
     SpaceXModule,
     GaleryModule,
+    CalendarModule,
     NotFoundModule
   ],
   providers: [],
