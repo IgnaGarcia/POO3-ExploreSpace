@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 
 import { IndexComponent } from './index.component';
 
@@ -9,11 +8,9 @@ import { IndexComponent } from './index.component';
     IndexComponent
   ],
   imports: [
-    BrowserModule,
-    CommonModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [IndexComponent]
 })
-
 export class IndexModule { }

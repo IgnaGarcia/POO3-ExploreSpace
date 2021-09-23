@@ -1,1 +1,37 @@
-<h1>HOLA MUNDO</h1>
+<div>
+    <button>Anterior</button>
+    <div>
+        <img/>
+        <h1>Titulo Banner</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ipsum
+            similique quis eum ea excepturi, a illo eos voluptate quia optio dicta
+            iste quam, aut veritatis consequatur, aliquid tenetur veniam?
+        </p>
+        <button>Leer mas</button>
+    </div>
+    <button>Siguiente</button>
+</div>
+
+<div>
+    <h2>Proximos Eventos</h2>
+    <div>Fltrar v</div>
+    <ul>
+        <li *ngFor="let launch of launches">
+            {{ launch.flight_number }} - {{ launch.name }} - {{ launch.date_local }}
+        </li>
+    </ul>
+    <button>Ver mas</button>
+    <button>Activar notificaciones</button>
+</div>
+<div>
+    <h2>Lanzamientos en vivo</h2>
+    <img/>
+    <div *ngIf="launches[0] != undefined">
+        <h3>{{ launches[0].flight_number }} - {{ launches[0].name }}</h3>
+        <h5>{{ launches[0].date_local }}</h5>
+        <p>{{ launches[0].details }}</p>
+    </div>
+    <button>Leer mas</button>
+</div>
+<button>Ver original</button>
