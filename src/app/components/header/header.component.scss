@@ -1,0 +1,18 @@
+.main-link {
+    font-weight: bold;
+    display: inline;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background: #00000055
+}
+.list-link {
+    display: flex;
+    list-style: none;
+}
+.nav-link {
+    margin: 0 15px;
+}

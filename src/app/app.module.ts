@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
 import { IndexModule } from './pages/index/index.module';
 import { LaunchesModule } from './pages/launches/launches.module';
 import { GaleryModule } from './pages/gallery/gallery.module';
@@ -14,9 +12,14 @@ import { SpaceXModule } from './pages/spaceX/spacex.module';
 import { CalendarModule } from './pages/calendar/calendar.module';
 import { NotFoundModule } from './pages/notFound/notFount.module';
 
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
