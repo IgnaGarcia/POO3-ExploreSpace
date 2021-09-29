@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { retry, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
-import { env } from 'src/environments/environment';
 import { Launch } from '../models/launch.model';
 import { Rocket } from '../models/rocket.model';
 import { Crew } from '../models/crew.model';
@@ -13,13 +12,41 @@ import { StarLink } from '../models/starlink.model';
 import { Launchpad } from '../models/launchpad.model';
 import { Landpad } from '../models/landpad.model';
 
+interface Api {
+    spaceX_url: string;
+    launches: string;
+    latestLaunches: string;
+    upcomingLaunches: string;
+    rockets: string;
+    crew: string;
+    dragons: string;
+    company: string;
+    launchpads: string;
+    landpads: string;
+    starlink: string;
+}
+
 @Injectable({ providedIn: 'root' })
 export class SpaceXService {
+    api: Api = {
+        spaceX_url: "https://api.spacexdata.com/v4",
+        launches: "/launches",
+        latestLaunches: "/launches/latest",
+        upcomingLaunches: "/launches/upcoming",
+        rockets: "/rockets",
+        crew: "/crew",
+        dragons: "/dragons",
+        company: "/company",
+        launchpads: "/launchpads",
+        landpads: "/landpads",
+        starlink: "/starlink/query"
+    }
+
     constructor(private http: HttpClient) { }
 
     /* BASE */
     private get(path: string): Observable<any> {
-        return this.http.get(env.spaceX_url + path)
+        return this.http.get(this.api.spaceX_url + path)
             .pipe(
                 retry(1),
                 catchError(this.processError)
@@ -27,7 +54,7 @@ export class SpaceXService {
     }
 
     private post(path: string, body: any): Observable<any> {
-        return this.http.post(env.spaceX_url + path, body)
+        return this.http.post(this.api.spaceX_url + path, body)
             .pipe(
                 retry(1),
                 catchError(this.processError)
@@ -45,65 +72,65 @@ export class SpaceXService {
 
     /* LAUNCHES */
     getUpcomingLaunches(): Observable<Array<Launch>> {
-        return this.get(env.upcomingLaunches)
+        return this.get(this.api.upcomingLaunches)
     }
 
     getLatestLaunches(): Observable<Launch> {
-        return this.get(env.latestLaunches)
+        return this.get(this.api.latestLaunches)
     }
 
     getAllLaunches(): Observable<Array<Launch>> {
-        return this.get(env.launches);
+        return this.get(this.api.launches);
     }
 
     /* ROCKETS */
     getAllRockets(): Observable<Array<Rocket>> {
-        return this.get(env.rockets);
+        return this.get(this.api.rockets);
     }
 
     getRocket(rocket: string): Observable<Rocket> {
-        return this.get(`${env.rockets}/${rocket}`);
+        return this.get(`${this.api.rockets}/${rocket}`);
     }
 
     /* CREW */
     getAllCrews(): Observable<Array<Crew>> {
-        return this.get(env.crew);
+        return this.get(this.api.crew);
     }
 
     getCrew(crew: string): Observable<Crew> {
-        return this.get(`${env.crew}/${crew}`);
+        return this.get(`${this.api.crew}/${crew}`);
     }
 
     /* DRAGONS */
     getAllDragons(): Observable<Array<Dragon>> {
-        return this.get(env.dragons);
+        return this.get(this.api.dragons);
     }
 
     getDragon(dragon: string): Observable<Dragon> {
-        return this.get(`${env.dragons}/${dragon}`);
+        return this.get(`${this.api.dragons}/${dragon}`);
     }
 
     /* LAUNCHPADS */
     getAllLaunchpads(): Observable<Array<Launchpad>> {
-        return this.get(env.launchpads);
+        return this.get(this.api.launchpads);
     }
 
     getLaunchpad(launchpad: string): Observable<Launchpad> {
-        return this.get(`${env.launchpads}/${launchpad}`);
+        return this.get(`${this.api.launchpads}/${launchpad}`);
     }
 
     /* LANDPADS */
     getAllLandpads(): Observable<Array<Landpad>> {
-        return this.get(env.landpads);
+        return this.get(this.api.landpads);
     }
 
     getLandpad(landpad: string): Observable<Landpad> {
-        return this.get(`${env.landpads}/${landpad}`);
+        return this.get(`${this.api.landpads}/${landpad}`);
     }
 
     /* STARLINK */
     getActiveStarlinks(): Observable<StarLink> {
-        return this.post(env.starlink, {
+        return this.post(this.api.starlink, {
             "query": {
                 "latitude": {
                     "$ne": null
@@ -118,7 +145,7 @@ export class SpaceXService {
     }
 
     getInactiveStarlinks(): Observable<StarLink> {
-        return this.post(env.starlink, {
+        return this.post(this.api.starlink, {
             "query": {
                 "latitude": null
             },
@@ -132,6 +159,6 @@ export class SpaceXService {
 
     /* COMPANY */
     getCompanyData(): Observable<Company> {
-        return this.get(env.company);
+        return this.get(this.api.company);
     }
 }

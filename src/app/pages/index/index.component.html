@@ -1,4 +1,4 @@
-<div>
+<div class="flex banner">
     <button>Anterior</button>
     <div>
         <img/>
@@ -13,17 +13,22 @@
     <button>Siguiente</button>
 </div>
 
-<div>
-    <h2>Proximos Eventos</h2>
-    <div>Fltrar v</div>
+<div class="minicalendar">
+    <div class="flex">
+        <h2>Proximos Eventos</h2>
+        <button>Fltrar v</button>
+    </div>
     <ul>
         <li *ngFor="let launch of launches">
             {{ launch.flight_number }} - {{ launch.name }} - {{ launch.date_local }}
         </li>
     </ul>
-    <button>Ver mas</button>
-    <button>Activar notificaciones</button>
+    <div class="flex buttons">
+        <button>Ver mas</button>
+        <button>Activar notificaciones</button>
+    </div>
 </div>
+
 <div>
     <h2>Lanzamientos en vivo</h2>
     <img/>
