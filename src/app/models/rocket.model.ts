@@ -50,7 +50,7 @@ interface Engines {
 
 interface Stage {
     reusable: boolean,
-    engines: number:
+    engines: number,
     fuel_amount_tons: number,
     burn_time_sec: number
 }
