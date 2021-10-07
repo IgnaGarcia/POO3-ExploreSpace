@@ -1,0 +1,40 @@
+/* COLORS */
+$eerie-black: #151515;
+$soft-black: #252525;
+$bright-navy-blue: #4378ba;
+$yale-blue: #204d91;
+$st-patricks-blue: #29306d;
+$pink-pantone: #e35095;
+$plum: #9c4092;
+$midnight: #522464;
+$gainsboro: #dddddd;
+$cultured: #eeeeee;
+
+/* PALETTES */
+$plt-blue: (
+ 200: $bright-navy-blue,
+ 400: $yale-blue,
+ 600: $st-patricks-blue,
+ contrast: (
+   200: $soft-black,
+   400: $gainsboro,
+   600: $cultured
+ )
+);
+
+$plt-violet: (
+ 200: $pink-pantone,
+ 400: $plum,
+ 600: $midnight,
+ contrast: (
+   200: $soft-black,
+   400: $gainsboro,
+   600: $cultured
+ )
+);
+
+/* FONT SIZES */ 
+
+/* BREACK POINTS */
+
+/* SIZES */
