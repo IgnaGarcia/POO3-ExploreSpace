@@ -1,15 +1,51 @@
+@import "../../../assets/var";
+
 .main-link {
-    font-weight: bold;
-    display: inline;
+  font-weight: bold;
+  display: inline;
 }
+
 .flex {
-    padding: 10px 10px 5px;
-    margin-bottom: 2em;
-    align-items: center;
+  padding: 10px 10px 5px;
+  margin-bottom: 2em;
+  align-items: center;
 }
-.list-link {
-    display: flex;
+
+.row-list {
+  display: flex;
 }
+
+.column-list {
+  li {
+    margin: 15px 0;
+  }
+}
+
 .nav-link {
-    margin: 0 15px;
+  margin: 0 15px;
+}
+
+mat-sidenav {
+    border-left: 1px solid $secondary-400;
+    box-shadow: 20px 0 80px 0 $secondary-200;
+  padding: 16px;
+  width: 200px;
+}
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: $bkp-md) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
 }

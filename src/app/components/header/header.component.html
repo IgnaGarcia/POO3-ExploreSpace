@@ -1,9 +1,24 @@
 <nav class="flex container">
     <h2><a routerLink="/" class="main-link h1 c-secondary-400">ExploreSpace</a></h2>
-    <ul class="list-link p1">
+
+    <ul class="desktop row-list p1">
         <li><a class="nav-link" routerLink="/calendario" routerLinkActive="c-secondary-400">Calendario</a></li>
         <li><a class="nav-link" routerLink="/galeria" routerLinkActive="c-secondary-400">Galeria</a></li>
         <li><a class="nav-link" routerLink="/lanzamientos" routerLinkActive="c-secondary-400">Lanzamientos</a></li>
         <li><a class="nav-link" routerLink="/spacex" routerLinkActive="c-secondary-400">Sobre SpaceX</a></li>
     </ul>
+    <mat-sidenav-container class="mobile">
+        <mat-sidenav #sidenav [mode]="'push'" position="end" [fixedInViewport]="true" >
+            <button mat-button (click)="sidenav.toggle()">Cerrar</button>
+            <ul class="column-list p1">
+                <li><a class="nav-link" routerLink="/calendario" routerLinkActive="c-secondary-400">Calendario</a></li>
+                <li><a class="nav-link" routerLink="/galeria" routerLinkActive="c-secondary-400">Galeria</a></li>
+                <li><a class="nav-link" routerLink="/lanzamientos" routerLinkActive="c-secondary-400">Lanzamientos</a></li>
+                <li><a class="nav-link" routerLink="/spacex" routerLinkActive="c-secondary-400">Sobre SpaceX</a></li>
+            </ul>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <button mat-button (click)="sidenav.toggle()">Menu</button>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </nav>
