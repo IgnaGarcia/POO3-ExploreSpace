@@ -1,15 +1,14 @@
-@import "../../../assets/theme.scss";
-
 .main-link {
     font-weight: bold;
     display: inline;
 }
 .flex {
-    padding: 0px 20px;
+    padding: 10px 10px 5px;
+    margin-bottom: 2em;
+    align-items: center;
 }
 .list-link {
     display: flex;
-    list-style: none;
 }
 .nav-link {
     margin: 0 15px;

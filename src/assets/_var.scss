@@ -10,31 +10,72 @@ $midnight: #522464;
 $gainsboro: #dddddd;
 $cultured: #eeeeee;
 
-/* PALETTES */
-$plt-blue: (
- 200: $bright-navy-blue,
- 400: $yale-blue,
- 600: $st-patricks-blue,
- contrast: (
-   200: $soft-black,
-   400: $gainsboro,
-   600: $cultured
- )
-);
+$bg: $eerie-black;
+$soft-bg: $soft-black;
+$text: $gainsboro;
+$soft-text: $cultured;
 
-$plt-violet: (
- 200: $pink-pantone,
- 400: $plum,
- 600: $midnight,
- contrast: (
-   200: $soft-black,
-   400: $gainsboro,
-   600: $cultured
- )
-);
+
+/* PALETTES */
+$primary-200:  $bright-navy-blue;
+$primary-400:  $yale-blue;
+$primary-600:  $st-patricks-blue;
+$i-primary-200:  $soft-black;
+$i-primary-400:  $gainsboro;
+$i-primary-600:  $cultured;
+
+$secondary-200:  $pink-pantone;
+$secondary-400:  $plum;
+$secondary-600:  $midnight;
+$i-secondary-200:  $soft-black;
+$i-secondary-400:  $gainsboro;
+$i-secondary-600:  $cultured;
+
+.c-primary-200{
+  color: $primary-200;
+}
+.c-primary-400{
+  color: $primary-400;
+}
+.c-primary-600{
+  color: $primary-600;
+}
+.c-secondary-200{
+  color: $secondary-200;
+}
+.c-secondary-400{
+  color: $secondary-400;
+}
+.c-secondary-600{
+  color: $secondary-600;
+}
 
 /* FONT SIZES */ 
 
 /* BREACK POINTS */
+$bkp-sm: 576px;
+$bkp-md: 768px;
+$bkp-lg: 992px;
+$bkp-xl: 1200px;
+$bkp-xxl: 1400px;
+
 
 /* SIZES */
+.d1 {
+  font-size: clamp(3.3rem, 3.3rem + 1.3333vw, 4.5rem);
+}
+.d2 {
+  font-size: clamp(2.3rem, 1.7rem + 1.7333vw, 3.5rem);
+}
+.h1 {
+  font-size: clamp(1.4rem, 1.4rem + 1.3333vw, 2.5rem);
+}
+.h2 {
+  font-size: clamp(1.1rem, 1.1rem + 0.6667vw, 1.5rem);
+}
+.p1 {
+  font-size: clamp(0.9rem, 0.9rem + 0.5333vw, 1.1rem);
+}
+.p2 {
+  font-size: clamp(0.7rem, 0.7rem + 0.4vw, 0.9rem);
+}
