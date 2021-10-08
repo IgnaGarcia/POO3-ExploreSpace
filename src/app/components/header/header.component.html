@@ -2,14 +2,14 @@
     <h2><a routerLink="/" class="main-link h1 c-secondary-400">ExploreSpace</a></h2>
 
     <ul class="desktop row-list p1">
-        <li><a class="nav-link" routerLink="/calendario" routerLinkActive="c-secondary-400">Calendario</a></li>
-        <li><a class="nav-link" routerLink="/galeria" routerLinkActive="c-secondary-400">Galeria</a></li>
-        <li><a class="nav-link" routerLink="/lanzamientos" routerLinkActive="c-secondary-400">Lanzamientos</a></li>
-        <li><a class="nav-link" routerLink="/spacex" routerLinkActive="c-secondary-400">Sobre SpaceX</a></li>
+        <li><a class="nav-link btn" routerLink="/calendario" routerLinkActive="c-secondary-400">Calendario</a></li>
+        <li><a class="nav-link btn" routerLink="/galeria" routerLinkActive="c-secondary-400">Galeria</a></li>
+        <li><a class="nav-link btn" routerLink="/lanzamientos" routerLinkActive="c-secondary-400">Lanzamientos</a></li>
+        <li><a class="nav-link btn" routerLink="/spacex" routerLinkActive="c-secondary-400">Sobre SpaceX</a></li>
     </ul>
     <mat-sidenav-container class="mobile">
         <mat-sidenav #sidenav [mode]="'push'" position="end" [fixedInViewport]="true" >
-            <button mat-button (click)="sidenav.toggle()">Cerrar</button>
+            <button mat-button (click)="sidenav.toggle()" class="btn bg-primary">Cerrar</button>
             <ul class="column-list p1">
                 <li><a class="nav-link" routerLink="/calendario" routerLinkActive="c-secondary-400">Calendario</a></li>
                 <li><a class="nav-link" routerLink="/galeria" routerLinkActive="c-secondary-400">Galeria</a></li>
@@ -18,7 +18,7 @@
             </ul>
         </mat-sidenav>
         <mat-sidenav-content>
-            <button mat-button (click)="sidenav.toggle()">Menu</button>
+            <button mat-button (click)="sidenav.toggle()" class="btn bg-primary">Menu</button>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </nav>
