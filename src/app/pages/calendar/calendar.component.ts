@@ -12,7 +12,6 @@ export class CalendarComponent {
     launches: Array<Launch>;
 
     constructor(private _spaceXService: SpaceXService) { 
-        console.log("load calendar page")
         this.launches = new Array<Launch>();
     }
 

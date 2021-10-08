@@ -1,4 +1,6 @@
 <h1>CALENDARIO</h1>
 <ul> 
-    <li *ngFor="let launch of launches"> {{ launch.flight_number }} - {{ launch.name }} - {{ launch.date_local }} </li>
+    <li *ngFor="let launch of launches"> 
+        <normal-event-component [event]="launch"> </normal-event-component>    
+    </li>
 </ul>

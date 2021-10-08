@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { IndexComponent } from './index.component';
-import { NormalEventComponent } from 'src/app/components/calendar/normal-event/normal-event.component';
+import { ComponentsModule } from 'src/app/components/components.module';
 @NgModule({
   declarations: [
-    IndexComponent,
-    NormalEventComponent
+    IndexComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [IndexComponent]
