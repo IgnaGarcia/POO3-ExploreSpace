@@ -3,9 +3,11 @@ $eerie-black: #151515;
 $soft-black: #252525;
 $bright-navy-blue: #4378ba;
 $yale-blue: #204d91;
+$yale-blue-50: #204d9175;
 $st-patricks-blue: #29306d;
 $pink-pantone: #e35095;
 $plum: #9c4092;
+$plum-50: #9c409275;
 $midnight: #522464;
 $gainsboro: #dddddd;
 $cultured: #eeeeee;
@@ -19,6 +21,7 @@ $soft-text: $cultured;
 /* PALETTES */
 $primary-200:  $bright-navy-blue;
 $primary-400:  $yale-blue;
+$primary-400-50:  $yale-blue-50;
 $primary-600:  $st-patricks-blue;
 $i-primary-200:  $soft-black;
 $i-primary-400:  $gainsboro;
@@ -26,6 +29,7 @@ $i-primary-600:  $cultured;
 
 $secondary-200:  $pink-pantone;
 $secondary-400:  $plum;
+$secondary-400-50:  $plum-50;
 $secondary-600:  $midnight;
 $i-secondary-200:  $soft-black;
 $i-secondary-400:  $gainsboro;
@@ -58,6 +62,42 @@ $i-secondary-600:  $cultured;
 .white-bg{
   background: $text;
 }
+.brd-primary{
+  border: 2px solid $primary-400;
+  &:hover{
+    background-color: $primary-400;
+  }
+}
+.brd-secondary{
+  border: 2px solid $secondary-400;
+  &:hover{
+    background-color: $secondary-400;
+  }
+}
+.bg-primary{
+  background-color: $primary-400;
+  &:hover{
+    background-color: $primary-400-50;
+  }
+}
+.bg-secondary{
+  background-color: $secondary-400;
+  &:hover{
+    background-color: $secondary-400-50;
+  }
+}
+.bg-primary-50{
+  background-color: $primary-400-50;
+  &:hover{
+    background-color: $primary-400;
+  }
+}
+.bg-secondary-50{
+  background-color: $secondary-400-50;
+  &:hover{
+    background-color: $secondary-400;
+  }
+}
 
 /* FONT SIZES */ 
 
@@ -70,21 +110,27 @@ $bkp-xxl: 1400px;
 
 
 /* SIZES */
+$font-d1:  clamp(3.3rem, 3.3rem + 1.3333vw, 4.5rem);
+$font-d2:  clamp(2.3rem, 1.7rem + 1.7333vw, 3.5rem);
+$font-h1:  clamp(1.4rem, 1.4rem + 1.3333vw, 2.5rem);
+$font-h2:  clamp(1.1rem, 1.1rem + 0.6667vw, 1.5rem);
+$font-p1:  clamp(0.9rem, 0.9rem + 0.5333vw, 1.1rem);
+$font-p2:  clamp(0.7rem, 0.7rem + 0.4vw, 0.9rem);
 .d1 {
-  font-size: clamp(3.3rem, 3.3rem + 1.3333vw, 4.5rem);
+  font-size: $font-d1;
 }
 .d2 {
-  font-size: clamp(2.3rem, 1.7rem + 1.7333vw, 3.5rem);
+  font-size: $font-d2;
 }
 .h1 {
-  font-size: clamp(1.4rem, 1.4rem + 1.3333vw, 2.5rem);
+  font-size: $font-h1;
 }
 .h2 {
-  font-size: clamp(1.1rem, 1.1rem + 0.6667vw, 1.5rem);
+  font-size: $font-h2;
 }
 .p1 {
-  font-size: clamp(0.9rem, 0.9rem + 0.5333vw, 1.1rem);
+  font-size: $font-p1;
 }
 .p2 {
-  font-size: clamp(0.7rem, 0.7rem + 0.4vw, 0.9rem);
+  font-size: $font-p2;
 }
