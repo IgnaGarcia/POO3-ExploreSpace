@@ -1,6 +1,5 @@
-<h1>CALENDARIO</h1>
-<ul> 
-    <li *ngFor="let launch of launches"> 
-        <normal-event-component [event]="launch"> </normal-event-component>    
-    </li>
-</ul>
+
+<h1 class="container">CALENDARIO</h1>
+<div class="h-scroll semi-container">  
+    <normal-event-component *ngFor="let launch of launches" [event]="launch"> </normal-event-component>    
+</div>

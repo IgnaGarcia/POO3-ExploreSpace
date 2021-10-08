@@ -29,7 +29,7 @@ footer,header,hgroup,menu,nav,section {
 }
 
 nav ul {
-    list-style:none;
+    list-style: none;
 }
 
 a {
@@ -74,6 +74,18 @@ html, body {
     max-width: $bkp-xxl;
   }
 }
+.semi-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  @media (min-width: $bkp-md) {
+    width: 98%;
+  }
+  @media (min-width: $bkp-lg) {
+    width: 95%;
+    max-width: $bkp-xxl + 200px;
+  }
+}
 
 .btn{
   border: none;
@@ -96,4 +108,34 @@ html, body {
   border: none;
   padding: 0.5em 0.9em;
   border-radius: 100px;
+}
+
+.h-scroll{
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 10px 0;
+  /* width */
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $soft-bg;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-400-50;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-400;
 }

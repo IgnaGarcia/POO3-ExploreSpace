@@ -14,15 +14,13 @@
 </div>
 
 <div class="minicalendar">
-    <div class="flex">
+    <div class="flex container">
         <h2>Proximos Eventos</h2>
         <button>Fltrar v</button>
     </div>
-    <ul>
-        <li *ngFor="let launch of launches">
-            <normal-event-component [event]="launch"> </normal-event-component>
-        </li>
-    </ul>
+    <div class="h-scroll semi-container">  
+        <normal-event-component *ngFor="let launch of launches" [event]="launch"> </normal-event-component>    
+    </div>
     <div class="flex buttons">
         <button>Ver mas</button>
         <button>Activar notificaciones</button>
