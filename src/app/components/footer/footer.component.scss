@@ -1,7 +1,81 @@
+@import "../../../assets/var";
+
 .footer-container {
-    display: flex;
-    align-items: center;
+  border-top: 1px solid $primary-400;
+  box-shadow: 0px 10px 40px 0 $primary-200;
+  margin-top: 3.5em;
+  padding: 3em 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .list-link {
-    list-style: none;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 0) {
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    b {
+      padding: 10px 15px;
+    }
+
+    .list-link {
+      margin-left: 60px;
+      flex-direction: column;
+
+      li {
+        padding: 5px;
+
+        &:hover {
+          a {
+            color: $secondary-200;
+          }
+        }
+      }
+    }
+  }
+
+  .devby {
+    order: 10;
+    margin: 20px auto -15px;
+
+    a {
+      color: $secondary-200;
+    }
+  }
+}
+
+@media (min-width: $bkp-md) {
+  nav, .blank, .devby{
+    width: 33.33%;
+    .list-link{
+        margin: 0;
+        margin: auto;
+    }
+  }
+
+  .devby {
+    margin: 0;
+    order: 0;
+    text-align: center;
+    align-self: flex-end;
+
+    a {
+      color: $secondary-200;
+    }
+  }
 }
