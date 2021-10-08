@@ -99,6 +99,34 @@ $i-secondary-600:  $cultured;
   }
 }
 
+.box-glow-p{
+  &:hover{
+    box-shadow: 
+      0 0 0.2rem $primary-400,
+      0 0 1.8rem $primary-400-50;
+  }
+}
+.box-glow-s{
+  &:hover{
+    box-shadow: 
+      0 0 0.2rem $secondary-400,
+      0 0 1.8rem $secondary-400-50;
+  }
+}
+.text-glow-p{
+  text-shadow: 
+    0 0 7px $primary-200,
+    0 0 10px $primary-200,
+    0 0 21px $primary-200,
+    0 0 42px $primary-200;
+}
+.text-glow-s{
+  text-shadow: 
+    0 0 7px $secondary-200,
+    0 0 21px $secondary-200,
+    0 0 42px $secondary-200;
+}
+
 /* FONT SIZES */ 
 
 /* BREACK POINTS */

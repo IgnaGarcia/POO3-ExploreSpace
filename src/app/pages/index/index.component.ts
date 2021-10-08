@@ -12,7 +12,6 @@ export class IndexComponent {
     launches: Array<Launch>;
 
     constructor(private _spaceXService: SpaceXService) {
-        console.log('load index page');
         this.launches = new Array<Launch>();
     }
 

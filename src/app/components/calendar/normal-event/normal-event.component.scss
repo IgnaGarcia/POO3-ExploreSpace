@@ -1,0 +1,36 @@
+@import '../../../../assets/_var.scss';
+
+fieldset{
+    display: block;
+    width: 175px;
+    height: auto;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid $primary-400-50;
+    &:hover{
+        border: 1px solid $primary-400;
+        span{
+            color: $secondary-200;
+        }
+    }
+    margin: 5px 10px;
+}
+legend{
+    text-align: start;
+    margin-left: 25px;
+    font-weight: bold;
+}
+table{
+    padding: 12px 5px 15px;
+    margin: 0 auto;
+}
+p, span, img, table, legend{
+    background-color: transparent;
+}
+p{
+    font-weight: 600;
+}
+img{
+    margin: 15px 0;
+    width: 70px;
+}

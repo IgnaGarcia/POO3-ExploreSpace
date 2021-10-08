@@ -20,7 +20,7 @@
     </div>
     <ul>
         <li *ngFor="let launch of launches">
-            {{ launch.flight_number }} - {{ launch.name }} - {{ launch.date_local }}
+            <normal-event-component [event]="launch"> </normal-event-component>
         </li>
     </ul>
     <div class="flex buttons">

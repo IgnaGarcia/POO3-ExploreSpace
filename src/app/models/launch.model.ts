@@ -10,7 +10,7 @@ export interface Launch {
     date_utc: Date,
     date_unix: number,
     date_local: Date,
-    date_precision: DatePrecision,
+    date_precision: string,
     tbd: boolean,
     net: boolean,
     success: boolean,
@@ -22,15 +22,6 @@ export interface Launch {
     payloads: string[],
     launchpad: string,
     cores: LaunchCore[]
-}
-
-enum DatePrecision {
-    quarter, 
-    half, 
-    year, 
-    month, 
-    day, 
-    hour
 }
 
 interface LaunchLink {
