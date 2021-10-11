@@ -1,0 +1,51 @@
+@import '../../../assets/var';
+//TODO: video en full width
+//TODO: titulo con mayor letra o eliminar
+//TODO: boton de cargar mas que invoque a la funcion
+.mainImage {
+    h3 {
+        padding-left: 1.5em;
+        margin-bottom: 1em;
+        font-weight: 600;
+    }
+    p {
+        line-height: 1.2;
+    }
+    .imageContainer {
+        background-color: $black-50;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5em;
+    }
+    img, iframe {
+        margin: auto;
+        min-width: 80%;
+        aspect-ratio: 23 / 9;
+    }
+    margin-bottom: 2em;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  apod-component {
+    min-height: 20vh;
+    max-height: 60vh;
+    position: relative;
+    @media (min-width: $bkp-md) {
+        height: 20vh;
+        width: 50%;
+    }
+    @media (min-width: $bkp-lg) {
+        height: 30vh;
+    }
+    @media (min-width: $bkp-xl) {
+        height: 45vh;
+    }
+    @media (min-width: $bkp-xxl) {
+        height: 55vh;
+    }
+  }
+}
+

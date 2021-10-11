@@ -1,0 +1,6 @@
+<div>
+    <img loading="lazy" *ngIf="apod.media_type == 'image'" src="{{getUrl()}}">
+    <iframe *ngIf="apod.media_type == 'video'" [src]='safeURL' allowfullscreen></iframe>
+    <h3>{{apod.date}}: {{apod.title}}</h3>
+</div>
+

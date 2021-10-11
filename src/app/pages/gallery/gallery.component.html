@@ -1,4 +1,14 @@
-<h1>GALERIA</h1>
-<ul> 
-    <li *ngFor="let img of gallery"> {{ img.title }} </li>
+<h1 class="container">GALERIA</h1>
+<div class="mainImage">
+    <div class="imageContainer">
+        <img loading="lazy" *ngIf="firstApod.media_type == 'image'" src="{{getUrl()}}">
+        <iframe *ngIf="firstApod.media_type == 'video'" [src]='safeURL' allowfullscreen></iframe>
+    </div>
+    <div class="container">
+        <h3 class="c-secondary-200 h2">{{firstApod.date}}: {{firstApod.title}}</h3>
+        <p class="p2">"{{firstApod.explanation}}"</p>
+    </div>
+</div>
+<ul class="semicontainer"> 
+    <apod-component *ngFor="let img of gallery" [apod]="img"></apod-component>
 </ul>
