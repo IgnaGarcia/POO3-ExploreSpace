@@ -1,7 +1,5 @@
 @import '../../../assets/var';
-//TODO: video en full width
-//TODO: titulo con mayor letra o eliminar
-//TODO: boton de cargar mas que invoque a la funcion
+
 .mainImage {
     h3 {
         padding-left: 1.5em;
@@ -19,8 +17,8 @@
     }
     img, iframe {
         margin: auto;
-        min-width: 80%;
-        aspect-ratio: 23 / 9;
+        min-width: 60%;
+        max-height: 80vh;
     }
     margin-bottom: 2em;
 }

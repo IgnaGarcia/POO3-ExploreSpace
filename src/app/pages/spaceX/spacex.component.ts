@@ -9,6 +9,17 @@ import { Rocket } from 'src/app/models/rocket.model';
 import { Dragon } from 'src/app/models/dragon.model';
 import { Base } from 'src/app/models/base.model';
 
+//TODO: banner
+//TODO: descrpcion general de la empresa
+//TODO: Estadisticas de miembros
+//TODO: boton de ver calendario con filtro de solo lanzamientos incluidos 
+//TODO: boton de ver lanzamientos para ir a seccion de proximo lanzamiento
+//TODO: seccion de starlink donde explica la mision y muestre las estadisticas
+//TODO: cards de astronautas
+//TODO: cards de cohetes
+//TODO: cards de dragons
+//TODO: cards de bases
+//TODO: traducciones de lo que sea necesario
 @Component({
     selector: 'spaceX-page',
     templateUrl: './spacex.component.html',

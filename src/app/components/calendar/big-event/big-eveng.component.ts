@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+//TODO: bigevent card
 @Component({
     selector: 'big-event-component',
     templateUrl: './big-event.component.html',

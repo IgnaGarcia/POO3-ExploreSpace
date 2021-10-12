@@ -3,6 +3,14 @@ import { Apod } from 'src/app/models/apod.model';
 import { ApodService } from '../../services/apod.service'
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
+
+//TODO: video en full width en mobile
+//TODO: titulo con mayor letra o eliminar
+//TODO: boton de cargar mas que invoque a la funcion
+//TODO: imagenes onClick que carguen un overlay con la descripcion
+//TODO: boton de traducir automaticamente en cada descripcion visualizada
+//TODO: loader
+
 @Component({
     selector: 'gallery-page',
     templateUrl: './gallery.component.html',
@@ -29,7 +37,7 @@ export class GalleryComponent {
                 this.firstApod = res[res.length-1];
                 
                 this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.getUrl());
-                this.gallery.push(...res.slice(0, res.length-1))
+                this.gallery.push(...res.slice(0, res.length-1).reverse())
             });
     }
 
@@ -38,7 +46,7 @@ export class GalleryComponent {
     }
 
     sub10Days(end_date: number): Date {
-        return new Date(end_date - (12 * 24 * 60 * 60 * 1000));
+        return new Date(end_date - (10 * 24 * 60 * 60 * 1000));
     }
 
     dateToString(date: Date): string {
