@@ -9,17 +9,16 @@ import { Rocket } from 'src/app/models/rocket.model';
 import { Dragon } from 'src/app/models/dragon.model';
 import { Base } from 'src/app/models/base.model';
 
-//TODO: banner
-//TODO: descrpcion general de la empresa
-//TODO: Estadisticas de miembros
 //TODO: boton de ver calendario con filtro de solo lanzamientos incluidos 
 //TODO: boton de ver lanzamientos para ir a seccion de proximo lanzamiento
-//TODO: seccion de starlink donde explica la mision y muestre las estadisticas
 //TODO: cards de astronautas
 //TODO: cards de cohetes
 //TODO: cards de dragons
 //TODO: cards de bases
 //TODO: traducciones de lo que sea necesario
+//REVIEW: responsive banner
+//REVIEW: texto y video sobre starlink
+//REVIEW: iconos de links
 @Component({
     selector: 'spaceX-page',
     templateUrl: './spacex.component.html',
@@ -35,7 +34,6 @@ export class SpaceXComponent {
     dragons: Array<Dragon>;
 
     constructor(private _spaceXService: SpaceXService) {
-        console.log('load spaceX page');
         this.bases = new Array<Base>();
         this.crew = new Array<Crew>();
         this.rockets = new Array<Rocket>();
@@ -62,5 +60,13 @@ export class SpaceXComponent {
 
         // Cohetes
         this._spaceXService.getAllRockets().subscribe((res: Array<Rocket>) => this.rockets.push(...res))
+    }
+
+    getActiveP(){
+        return (this.activeStarlink.totalDocs * (100 / (this.activeStarlink.totalDocs + this.inactiveStarlink.totalDocs))).toFixed(1);
+    }
+
+    getInactiveP(){
+        return (this.inactiveStarlink.totalDocs * (100 / (this.activeStarlink.totalDocs + this.inactiveStarlink.totalDocs))).toFixed(1);
     }
 }
