@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Apod } from 'src/app/models/apod.model';
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 @Component({
     selector: 'apod-component',

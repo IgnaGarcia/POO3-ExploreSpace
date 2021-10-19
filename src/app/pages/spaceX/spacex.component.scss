@@ -53,12 +53,16 @@ div.info{
             margin: 5px 0;
         }
     }
+    div.flex{
+        margin: 2em auto;
+        justify-content: space-around;
+    }
 }
 
 div.starlink{
     margin-top: 5vh;
     background: $primary-600;
-    padding: 1em 0;
+    padding: 1.5em 0;
     * {
         background: transparent;
     }
@@ -68,7 +72,7 @@ div.starlink{
     }
     .column{
         flex: 0 1 45%;
-        padding: 2em 1em 0 0;
+        padding: 1.5em 1em 1.5em 0;
         
         h3{
             font-style: italic;
@@ -77,7 +81,7 @@ div.starlink{
             font-family: 'Goldman', sans-serif;
         }
         .text{
-            margin: .5em 0 1em 0;
+            margin: .5em 0;
         }
         .stat{
             font-family: 'Goldman', sans-serif;

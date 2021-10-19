@@ -10,8 +10,8 @@ import { NotFoundComponent } from './pages/notFound/notFound.component';
 
 const routes: Routes = [
   { path: 'inicio', component: IndexComponent },
-  { path: 'galeria', component: GalleryComponent },
   { path: 'calendario', component: CalendarComponent },
+  { path: 'galeria', component: GalleryComponent },
   { path: 'lanzamientos', component: LaunchesComponent },
   { path: 'spacex', component: SpaceXComponent },
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },

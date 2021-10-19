@@ -96,10 +96,11 @@ body {
   }
 }
 
-.btn{
+button, .btn{
   border: none;
   border-radius: 10px;
-  padding: 0.4em 1.6em;
+  height: 45px;
+  padding: 0.4em 1.5em;
   font-size: $font-p1;
   &:hover{
     cursor: pointer;
@@ -107,7 +108,7 @@ body {
 }
 .btn-basic {
   border: none;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
 }
 .btn-round {
   padding: 0.6em 1em;

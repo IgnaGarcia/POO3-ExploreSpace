@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Apod } from 'src/app/models/apod.model';
 import { ApodService } from '../../services/apod.service'
-import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 
 //TODO: video en full width en mobile

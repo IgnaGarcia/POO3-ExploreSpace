@@ -59,6 +59,11 @@
             {{company.cto_propulsion}}(CTO PROPULSION)
         </li>
     </ul>
+
+    <div class="flex container">
+        <button class="btn btn-basic bg-secondary" (click)="btnClick('/lanzamientos')"> Ver Lanzamientos </button>
+        <button class="btn brd-secondary" (click)="btnClick('/calendario')"> Ver Calendario </button>
+    </div>
 </div>
 
 <div class="starlink">
@@ -79,11 +84,16 @@
     </div>
 </div>
 <!--
-<ul> 
-    <li> Bases: {{ bases.length }} </li>
-    <li> Astronautas: {{ crew.length }} </li>
-    <li> Cohetes: {{ rockets.length }} </li>
-    <li> Dragones: {{ dragons.length }} </li>
-    <li> Compania: {{ company }} </li>
-</ul>
+<div class="flex">
+    <rocket-card *ngFor="let rocket in rockets" [rocket]="rocket"></rocket-card>
+</div>
+<div class="flex">
+    <member-card *ngFor="let member in crew" [member]="member"></member-card>
+</div>
+<div class="flex">
+    <dragon-card *ngFor="let dragon in dragons" [dragon]="dragon"></dragon-card>
+</div>
+<div class="flex">
+    <base-card *ngFor="let base in bases" [base]="base"></base-card>
+</div>
 -->

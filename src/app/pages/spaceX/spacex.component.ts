@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { SpaceXService } from 'src/app/services/spacex.service';
 
@@ -10,11 +11,6 @@ import { Dragon } from 'src/app/models/dragon.model';
 import { Base } from 'src/app/models/base.model';
 
 //TODO: boton de ver calendario con filtro de solo lanzamientos incluidos 
-//TODO: boton de ver lanzamientos para ir a seccion de proximo lanzamiento
-//TODO: cards de astronautas
-//TODO: cards de cohetes
-//TODO: cards de dragons
-//TODO: cards de bases
 //TODO: traducciones de lo que sea necesario
 //REVIEW: responsive banner
 //REVIEW: texto y video sobre starlink
@@ -33,7 +29,7 @@ export class SpaceXComponent {
     rockets: Array<Rocket>;
     dragons: Array<Dragon>;
 
-    constructor(private _spaceXService: SpaceXService) {
+    constructor(private _spaceXService: SpaceXService, private router: Router) {
         this.bases = new Array<Base>();
         this.crew = new Array<Crew>();
         this.rockets = new Array<Rocket>();
@@ -68,5 +64,9 @@ export class SpaceXComponent {
 
     getInactiveP(){
         return (this.inactiveStarlink.totalDocs * (100 / (this.activeStarlink.totalDocs + this.inactiveStarlink.totalDocs))).toFixed(1);
+    }
+
+    btnClick(url: string){
+        this.router.navigateByUrl(url)
     }
 }
