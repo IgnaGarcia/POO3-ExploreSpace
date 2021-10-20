@@ -4,6 +4,6 @@ export interface Crew {
     agency: string;
     image: string;
     wikipedia: string | null;
-    status: 'active' | 'retired',
+    status: string,
     launches: string[]
 }

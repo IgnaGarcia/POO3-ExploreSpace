@@ -87,9 +87,14 @@
 <div class="flex">
     <rocket-card *ngFor="let rocket in rockets" [rocket]="rocket"></rocket-card>
 </div>
-<div class="flex">
-    <member-card *ngFor="let member in crew" [member]="member"></member-card>
+-->
+
+<h2 class="container h1"> Astronautas </h2>
+<div class="card-list">
+    <member-card *ngFor="let member of crew" [member]="member"></member-card>
 </div>
+
+<!--
 <div class="flex">
     <dragon-card *ngFor="let dragon in dragons" [dragon]="dragon"></dragon-card>
 </div>

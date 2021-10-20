@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BaseCardComponent } from './base/base.component';
+import { CommonModule } from '@angular/common';
 
 import { NormalEventComponent } from './calendar/normal-event/normal-event.component';
 import { DragonCardComponent } from './dragon/dragon.component';
@@ -7,6 +8,9 @@ import { MemberCardComponent } from './member/member.component';
 import { RocketCardComponent } from './rocket/rocket.component';
 
 @NgModule({
+  imports: [
+    CommonModule
+  ],
   declarations: [
     NormalEventComponent,
     RocketCardComponent,

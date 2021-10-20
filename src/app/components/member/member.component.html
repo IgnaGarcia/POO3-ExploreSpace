@@ -1,0 +1,24 @@
+<div class="card paper-bg">
+    <img src={{member.image}}/>
+    
+    <div class="overlay">
+        <div class="flex">
+            <div>
+                <b class="c-secondary-200 p2">{{member.agency}}</b>
+                <h3 class="flex p1">{{member.name}}</h3>    
+            </div>
+            <a *ngIf="member.wikipedia" href={{member.wikipedia}}>
+                ICON WIKI
+            </a>
+        </div>
+
+        <div class="flex">
+            Vuelos: {{member.launches.length}}
+
+            <span class="active" *ngIf="member.status == 'active'; else inactive">Activo</span>
+            <ng-template #inactive class="inactive">
+                <span class="inactive">Retirado</span>
+            </ng-template>
+        </div>
+    </div>
+</div>
