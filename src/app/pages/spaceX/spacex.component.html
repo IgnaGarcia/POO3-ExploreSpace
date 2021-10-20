@@ -83,22 +83,29 @@
         <iframe src="https://www.youtube.com/embed/4372QYiPZB4" allowfullscreen></iframe>
     </div>
 </div>
-<!--
-<div class="flex">
-    <rocket-card *ngFor="let rocket in rockets" [rocket]="rocket"></rocket-card>
-</div>
--->
 
-<h2 class="container h1"> Astronautas </h2>
-<div class="card-list">
-    <member-card *ngFor="let member of crew" [member]="member"></member-card>
-</div>
+<section>
+    <h2 class="container h2"> Cohetes </h2>
+    <div class="card-list">
+        <rocket-card *ngFor="let rocket of rockets" [rocket]="rocket"></rocket-card>
+    </div>
+</section>
+<section>
+    <h2 class="container h2"> Astronautas </h2>
+    <div class="card-list">
+        <member-card *ngFor="let member of crew" [member]="member"></member-card>
+    </div>
+</section>
 
 <!--
-<div class="flex">
-    <dragon-card *ngFor="let dragon in dragons" [dragon]="dragon"></dragon-card>
+<section>
+    <div class="card-list">
+    <dragon-card *ngFor="let dragon of dragons" [dragon]="dragon"></dragon-card>
 </div>
-<div class="flex">
-    <base-card *ngFor="let base in bases" [base]="base"></base-card>
-</div>
+</section>
+<section>
+    <div class="card-list">
+        <base-card *ngFor="let base of bases" [base]="base"></base-card>
+    </div>
+</section>
 -->

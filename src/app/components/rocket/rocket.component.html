@@ -1,0 +1,33 @@
+<div class="card paper-bg">
+    <img src={{rocket.flickr_images[0]}}/>
+    
+    <div class="overlay">        
+        <div class="flex">
+            <div >
+                <span class="p2 c-secondary-200">{{rocket.company}}</span>
+                <h3 class="h3">{{rocket.name}}</h3>
+            </div>
+            <a *ngIf="rocket.wikipedia" href={{rocket.wikipedia}}>
+                ICON WIKI
+            </a>
+        </div>
+        
+        <div>
+            Tasa de Exito: {{rocket.success_rate_pct}}%
+        </div>
+        <div class="flex">
+            <div>
+                Costo de Lanzamiento: {{rocket.cost_per_launch}}
+            </div>
+            
+        </div>
+        
+        <span class="active" *ngIf="rocket.active; else inactive"> Activo </span>
+        <ng-template #inactive class="inactive">
+            <span class="inactive">Inactivo</span>
+        </ng-template>
+
+        <p>{{rocket.description}}</p>
+        
+    </div>
+</div>

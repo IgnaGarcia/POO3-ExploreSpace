@@ -1,0 +1,15 @@
+@import "../../../assets/var";
+//REVIEW: responsive design
+.card{
+    display: flex;
+    img{
+        border-radius: 15px 0 0 15px;
+    }
+    .overlay{
+        justify-content: space-between;
+        position: initial;
+        width: 300px;
+        border-radius: 0 15px 15px 0;
+        background: $soft-bg;
+    }
+}
