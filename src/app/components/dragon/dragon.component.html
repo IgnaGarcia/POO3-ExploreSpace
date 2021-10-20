@@ -1,0 +1,23 @@
+<div class="card paper-bg">   
+    <img src={{dragon.flickr_images[0]}}> 
+    <div class="overlay">
+        <div class="flex">
+            <div>
+                <b class="c-secondary-200 p2">{{dragon.type}}</b>
+                <h3 class="flex p1">{{dragon.name}}</h3>   
+            </div> 
+            <a *ngIf="dragon.wikipedia" href={{dragon.wikipedia}}>
+                ICON WIKI
+            </a>
+        </div>
+
+        <div class="flex">
+            Duracion en Orbita: {{dragon.orbit_duration_yr}} años
+
+            <span class="active" *ngIf="dragon.active; else inactive">Activo</span>
+            <ng-template #inactive class="inactive">
+                <span class="inactive">Inactivo</span>
+            </ng-template>
+        </div>
+    </div>
+</div>

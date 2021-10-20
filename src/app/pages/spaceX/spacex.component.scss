@@ -106,4 +106,7 @@ div.starlink{
 
 section{
     margin: 1.5em 0;
+    .space-around{
+        justify-content: space-around;
+    }
 }
