@@ -19,7 +19,7 @@ export class AppComponent { }
   //NTH: lista de posteos
   //NTH: busqueda y filtro de posteos
   //NTH: on click posteo te lleve a su pagina/overlay
-//NTH: pagina/overlay de posteo
-//NTH: firebase de posteos
-//NTH: peticion de crear posteo
-//NTH: pagina de administrador para revisar posteos
+  //NTH: pagina/overlay de posteo
+  //NTH: firebase de posteos
+  //NTH: peticion de crear posteo
+  //NTH: pagina de administrador para revisar posteos

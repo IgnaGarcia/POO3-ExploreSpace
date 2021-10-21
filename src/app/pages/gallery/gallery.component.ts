@@ -5,12 +5,10 @@ import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 
 //TODO: video en full width en mobile
-//TODO: titulo con mayor letra o eliminar
-//TODO: boton de cargar mas que invoque a la funcion
-//TODO: imagenes onClick que carguen un overlay con la descripcion
-//TODO: boton de traducir automaticamente en cada descripcion visualizada
 //TODO: loader
-
+//TODO: imagenes onClick que carguen un overlay con la descripcion
+//NTH: boton de cargar mas que invoque a la funcion
+//NTH: boton de traducir automaticamente en cada descripcion visualizada
 @Component({
     selector: 'gallery-page',
     templateUrl: './gallery.component.html',

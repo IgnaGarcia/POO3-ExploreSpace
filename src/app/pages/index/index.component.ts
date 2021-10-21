@@ -4,11 +4,10 @@ import { Launch } from 'src/app/models/launch.model';
 import { SpaceXService } from 'src/app/services/spacex.service';
 
 //TODO: banner
-//TODO: filtro de Eventos
+//TODO: mini calendario estilos y boyones
 //TODO: seccion de ultimo lanzamiento (horizontal)
 //TODO: seccion de galeria (vertical)
 //TODO: seccion de explorar espacio (vertical)
-//TODO: menos eventos en el scroll(mas span)
 @Component({
     selector: 'index-page',
     templateUrl: './index.component.html',

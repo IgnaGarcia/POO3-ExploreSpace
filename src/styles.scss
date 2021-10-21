@@ -125,8 +125,6 @@ button, .btn{
   align-items: center;
   overflow-x: scroll;
   padding: 10px 0;
-  /* width */
-
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -161,6 +159,8 @@ button, .btn{
   margin: 0 0.75em;
 }
 
+
+//REVIEW: responsive design
 .card{
   position: relative;
   border-radius: 15px;
