@@ -1,0 +1,31 @@
+<div class="card paper-bg">   
+    <img src={{base.images.large[0]}}> 
+    <div class="overlay">
+        <div class="flex">
+            <div>
+                <b class="c-secondary-200 p2">{{base.region}}</b>
+                <h3 class="flex p1">{{base.name}}</h3>   
+            </div> 
+            <a *ngIf="base.wikipedia" href={{base.wikipedia}}>
+                ICON WIKI
+            </a>
+        </div>
+
+        <div class="flex">
+            <span *ngIf="base.launch_successes; else landing">
+                Taza de exito: {{getSuccessRate(base.launch_successes, base.launch_attempts)}}%
+            </span>
+            <ng-template #landing>
+                <span>
+                    Taza de exito: {{getSuccessRate(base.landing_successes, base.landing_attempts)}}%
+                </span>
+            </ng-template>
+            <span></span>
+
+            <span class="active" *ngIf="base.status == 'active'; else inactive">Activa</span>
+            <ng-template #inactive>
+                <span class="inactive">Inactiva</span>
+            </ng-template>
+        </div>
+    </div>
+</div>

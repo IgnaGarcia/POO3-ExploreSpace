@@ -1,18 +1,21 @@
 export interface Base {
     id: string,
-    details: string,
-    wikipedia: string,
     name: string,
-    full_name: string,
-    status: "active" | "retired",
-    locality: string,
+    images: Images
+    status: string,
+    wikipedia: string,
     region: string,
+    landing_attempts: number,
+    landing_successes: number,
+    launch_attempts: number,
+    launch_successes: number,
+
+    locality: string,
+    details: string,
+    full_name: string,
     latitude: number,
     longitude: number,
-    landing_attempts: number,
-    landing_success: number,
     launches: string[],
-    image: Images
 }
 
 interface Images {
