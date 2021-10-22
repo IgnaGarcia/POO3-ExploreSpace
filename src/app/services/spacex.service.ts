@@ -14,7 +14,7 @@ import { Landpad } from '../models/landpad.model';
 
 interface Api {
     spaceX_url: string;
-    launches: string;
+    pastLaunches: string;
     latestLaunches: string;
     upcomingLaunches: string;
     rockets: string;
@@ -30,7 +30,7 @@ interface Api {
 export class SpaceXService {
     api: Api = {
         spaceX_url: "https://api.spacexdata.com/v4",
-        launches: "/launches",
+        pastLaunches: "/launches/past",
         latestLaunches: "/launches/latest",
         upcomingLaunches: "/launches/upcoming",
         rockets: "/rockets",
@@ -79,8 +79,8 @@ export class SpaceXService {
         return this.get(this.api.latestLaunches)
     }
 
-    getAllLaunches(): Observable<Array<Launch>> {
-        return this.get(this.api.launches);
+    getPastLaunches(): Observable<Array<Launch>> {
+        return this.get(this.api.pastLaunches);
     }
 
     /* ROCKETS */

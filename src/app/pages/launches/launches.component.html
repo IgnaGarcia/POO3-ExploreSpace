@@ -1,5 +1,24 @@
-<h1>LANZAMIENTO</h1>
-<ul> 
-    <li> Count: {{ launches.length }} </li>
-    <li *ngIf="lastLaunch != undefined"> Last launch: {{ lastLaunch.flight_number }} - {{ lastLaunch.name }} - {{ lastLaunch.date_local }}  </li>
-</ul>
+<button *ngIf="hasPrevius()" (click)=getPrevius()> Anterior </button>
+<button *ngIf="hasNext()" (click)=getNext()> Siguiente </button>
+
+<h2> {{launch.flight_number}} - {{launch.name}} </h2>
+<p> Fecha de Lanzamiento: {{launch.date_utc}} </p>
+<p> Exitoso: {{launch.success}} </p>
+<p> Proximo: {{launch.upcoming}} </p>
+<p> Detalles: {{launch.details}} </p>
+
+<p> Parche: </p>
+<img src="{{launch.links.patch.large}}" alt="">
+<img src="{{launch.links.patch.small}}" alt="">
+
+<section>
+    <div *ngFor="let img of launch.links.flickr.original">
+        <img src={{img}}>
+    </div>
+</section>
+
+<section>
+    <div *ngFor="let member of launch.crew">
+        {{member}}
+    </div>
+</section>

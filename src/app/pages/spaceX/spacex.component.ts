@@ -10,8 +10,8 @@ import { Rocket } from 'src/app/models/rocket.model';
 import { Dragon } from 'src/app/models/dragon.model';
 import { Base } from 'src/app/models/base.model';
 
-//TODO: boton de ver calendario con filtro de solo lanzamientos incluidos 
-//TODO: traducciones de lo que sea necesario
+//NTH: boton de ver calendario con filtro de solo lanzamientos incluidos 
+//NTH: traducciones de lo que sea necesario
 //REVIEW: responsive banner
 //REVIEW: texto y video sobre starlink
 //REVIEW: iconos de links
