@@ -2,15 +2,10 @@ import { i18nMetaToJSDoc } from '@angular/compiler/src/render3/view/i18n/meta';
 import { Component } from '@angular/core';
 import { Launch } from 'src/app/models/launch.model';
 import { SpaceXService } from '../../services/spacex.service'
+import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
-//TODO: lista de imagenes
-//TODO: imagen/video principal
-//TODO: botones de navegacion del array
-//TODO: Descripcion principal
-//TODO: cards de tecnologias
-//TODO: cads de tripulacion
-//TODO: boton de activar recordatorio si es pendiente
-//TODO: boton para traducir descripcion
+//NTH: boton de activar recordatorio si es pendiente
+//NTH: boton para traducir descripcion
 @Component({
     selector: 'launches-page',
     templateUrl: './launches.component.html',
@@ -21,8 +16,9 @@ export class LaunchesComponent {
     launches: Array<Launch>;
     launch: Launch;
     cursor: number;
+    safeURL: SafeUrl;
 
-    constructor(private _spaceXService: SpaceXService) { 
+    constructor(private _spaceXService: SpaceXService, private sanitizer: DomSanitizer) { 
         this.launches = new Array<Launch>();
     }
 
@@ -31,6 +27,8 @@ export class LaunchesComponent {
             this.launches.push(...past)
             this.cursor = this.launches.length - 1
             this.launch = this.launches[this.cursor]
+
+            this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.launch.links.webcast);
 
             this._spaceXService.getUpcomingLaunches().subscribe((upcoming: Array<Launch>) => {
                 this.launches.push(...upcoming)
@@ -50,6 +48,7 @@ export class LaunchesComponent {
         if(this.hasNext()){
             this.cursor += 1
             this.launch = this.launches[this.cursor]
+            this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.launch.links.webcast);
         }
     }
 
@@ -57,6 +56,7 @@ export class LaunchesComponent {
         if(this.hasPrevius()){
             this.cursor -= 1
             this.launch = this.launches[this.cursor]
+            this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.launch.links.webcast);
         }
     }
 }

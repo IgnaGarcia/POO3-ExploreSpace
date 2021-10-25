@@ -6,6 +6,7 @@ import { NormalEventComponent } from './calendar/normal-event/normal-event.compo
 import { DragonCardComponent } from './dragon/dragon.component';
 import { MemberCardComponent } from './member/member.component';
 import { RocketCardComponent } from './rocket/rocket.component';
+import { ImageCardComponent } from './image-card/image.component';
 
 @NgModule({
   imports: [
@@ -16,14 +17,16 @@ import { RocketCardComponent } from './rocket/rocket.component';
     RocketCardComponent,
     MemberCardComponent,
     DragonCardComponent,
-    BaseCardComponent
+    BaseCardComponent,
+    ImageCardComponent
   ],
   exports: [
     NormalEventComponent,
     RocketCardComponent,
     MemberCardComponent,
     DragonCardComponent,
-    BaseCardComponent
+    BaseCardComponent,
+    ImageCardComponent
   ]
 })
 export class ComponentsModule { }

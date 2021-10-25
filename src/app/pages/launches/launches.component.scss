@@ -1,0 +1,39 @@
+.banner-img {
+    .shadow{
+        justify-content: space-evenly;
+    }
+   .patch{
+        object-fit: contain;
+        max-height: 40vh;
+        background: transparent;
+        text-align: left;
+        width: auto;
+        display: block;
+    }
+    .d2{
+        background: transparent;
+        width: auto;
+        display: block;
+        text-align: left;
+    }
+}
+
+.buttons{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-evenly;
+}
+
+.info{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    
+    div{
+        text-align: end;
+        margin-bottom: 1em;
+        padding-right: 3em;
+    }
+}
+.semi-container{
+    margin: 0 auto;
+}

@@ -1,24 +1,52 @@
-<button *ngIf="hasPrevius()" (click)=getPrevius()> Anterior </button>
-<button *ngIf="hasNext()" (click)=getNext()> Siguiente </button>
 
-<h2> {{launch.flight_number}} - {{launch.name}} </h2>
-<p> Fecha de Lanzamiento: {{launch.date_utc}} </p>
-<p> Exitoso: {{launch.success}} </p>
-<p> Proximo: {{launch.upcoming}} </p>
-<p> Detalles: {{launch.details}} </p>
-
-<p> Parche: </p>
-<img src="{{launch.links.patch.large}}" alt="">
-<img src="{{launch.links.patch.small}}" alt="">
-
-<section>
-    <div *ngFor="let img of launch.links.flickr.original">
-        <img src={{img}}>
+<div class="banner-img">
+    <div class="shadow flex">
+        <img class="patch" src="{{launch.links.patch.large}}">
+        <h2 class="d2 text-glow-s"> {{launch.flight_number}} - {{launch.name}} </h2>  
     </div>
-</section>
+    <img *ngIf="launch.links.flickr.original[0] else hardcoded" src="{{launch.links.flickr.original[0]}}" alt="">
+    <ng-template #hardcoded>
+        <img src="../../../assets/img/banner.jpg" alt="">
+    </ng-template>
+    
+    <ul class="flex">
+        <li><a href={{launch.links.wikipedia}}>a</a></li>
+        <li><a href={{launch.links.article}}>a</a></li>
+        <li><a href={{launch.links.webcast}}>a</a></li>
+        <li><a href={{launch.links.presskit}}>a</a></li>
+        <li><a href={{launch.links.reddit.launch}}>a</a></li>
+    </ul>
+</div>
 
-<section>
-    <div *ngFor="let member of launch.crew">
-        {{member}}
+<div class="buttons container flex">
+    <button class="brd-primary" *ngIf="hasPrevius()" (click)=getPrevius()> <- Anterior </button>
+    <button class="brd-primary" *ngIf="hasNext()" (click)=getNext()> Siguiente -> </button>
+</div>
+
+<div class="info container">
+    <div>
+        <span *ngIf="launch.upcoming else upcoming"  class="upcoming"> {{launch.date_utc}} </span>
+        <ng-template #upcoming>
+            <span class="active"> {{launch.date_utc}} </span>
+
+            <span *ngIf="launch.success else failed"  class="active">- Exitoso </span>
+            <ng-template #failed>
+                <span class="inactive">- Fallido </span>
+            </ng-template>
+        </ng-template>
     </div>
+    
+    <p> {{launch.details}} </p>
+
+    <!-- TODO: embeb video-->
+    <iframe [src]='safeURL' frameborder="0"></iframe>s
+</div>
+
+<section class="semi-container card-list">
+    <span *ngFor="let img of launch.links.flickr.original">
+        <image-card image={{img}}></image-card>
+    </span>
+    <span class="card-list" *ngFor="let img of launch.links.flickr.small">
+        <image-card image={{img}}></image-card>
+    </span>
 </section>
