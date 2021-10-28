@@ -216,6 +216,7 @@ button, .btn{
   margin-top: -2em;
   max-height: 80vh;
   width: 100%;
+  position: relative;
   .shadow{
       position: absolute;
       box-shadow: inset 0px 0 400px 100px $eerie-black;

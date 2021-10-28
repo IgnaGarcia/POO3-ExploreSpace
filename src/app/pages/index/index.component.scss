@@ -1,7 +1,153 @@
-.buttons{
-    justify-content: space-around;
+@import '../../../assets/var';
+
+.buttons {
+  justify-content: space-around;
 }
 
-.semi-container{
-    gap: 0px 30px;
+.grid {
+  gap: 0px 30px;
+}
+
+.banner-img {
+  .shadow {
+    top: 0px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .d1 {
+    background: transparent;
+    width: auto;
+    text-align: left;
+  }
+
+  p {
+    background: transparent;
+    display: block;
+    max-width: 80%;
+    margin-top: 1em;
+  }
+}
+
+.minicalendar {
+  margin-top: 2em;
+
+  .info {
+    margin-bottom: 1em;
+
+    h2 {
+      margin-bottom: .6em;
+    }
+  }
+
+  .buttons {
+    margin-top: 1em;
+  }
+}
+
+.explore-section {
+  background: $primary-400;
+}
+
+div.launch {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  background: $primary-600;
+  padding: 1.5em 0;
+
+  * {
+    background: transparent;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex: 0 1 45%;
+    padding: 1.5em 1em 1.5em 0;
+    text-align: center;
+
+    h3 {
+      font-style: italic;
+      color: $eerie-black;
+      font-family: 'Goldman', sans-serif;
+    }
+
+    .text {
+      text-align: left;
+      margin: .5em 0;
+    }
+
+    span {
+      font-weight: 600;
+      font-family: 'Goldman', sans-serif;
+      font-style: italic;
+      color: $eerie-black;
+    }
+
+    button {
+      margin-top: 1em;
+    }
+  }
+
+  iframe {
+    flex: 1 1 45%;
+    aspect-ratio: 16/9;
+    height: auto;
+    margin-bottom: -3em;
+  }
+}
+
+.sections{
+    align-items: stretch;
+    margin-top: 4em;
+}
+
+.galery-section,
+.explore-section {
+  width: 100%;
+  padding: 2em .5em;
+  flex-direction: column;
+
+  p,
+  h3 {
+    background: transparent;
+  }
+
+  h3 {
+    color: $eerie-black;
+    font-weight: 600;
+    font-family: 'Goldman', sans-serif;
+    font-style: italic;
+  }
+}
+
+.galery-section {
+  background: $secondary-400;
+
+  .images {
+    padding: 0 .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      height: 200px;
+      flex-grow: 1;
+    }
+
+    img {
+      max-height: 100%;
+      min-width: 100%;
+      object-fit: cover;
+      vertical-align: bottom;
+    }
+  }
 }
