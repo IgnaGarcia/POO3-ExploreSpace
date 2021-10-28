@@ -17,6 +17,7 @@ export class LaunchesComponent {
     launch: Launch;
     cursor: number;
     safeURL: SafeUrl;
+    date: Date
 
     constructor(private _spaceXService: SpaceXService, private sanitizer: DomSanitizer) { 
         this.launches = new Array<Launch>();
@@ -58,5 +59,32 @@ export class LaunchesComponent {
             this.launch = this.launches[this.cursor]
             this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.launch.links.webcast);
         }
+    }
+
+    formatDate() {
+        const dateObj = new Date(this.launch.date_unix * 1000);
+        if(this.launch.tbd == true){
+            return 'Indefinida'
+        }
+        let str = `${dateObj.getFullYear()}`
+        if(this.launch.date_precision == 'hour'){
+            str = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${str} ${dateObj.getHours()}:00`;
+        }
+        else if (this.launch.date_precision == 'day'){
+            str = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${str}`;
+        }
+        else if (this.launch.date_precision == 'month'){
+            str = `${dateObj.getMonth() + 1}/${str}`;
+        }
+        else if (this.launch.date_precision == 'year'){
+            str = str;
+        }
+        else if (this.launch.date_precision == 'quarter'){
+            str = `${Math.floor((dateObj.getMonth() + 1) / 4)}° Cuarto de ${str}`;
+        }
+        else if (this.launch.date_precision == 'half'){
+            str = `${Math.floor((dateObj.getMonth() + 1) / 2)}° Mitad de ${str}`;
+        }
+        return str;
     }
 }

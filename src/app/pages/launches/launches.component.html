@@ -25,9 +25,9 @@
 
 <div class="info container">
     <div>
-        <span *ngIf="launch.upcoming else upcoming"  class="upcoming"> {{launch.date_utc}} </span>
+        <span *ngIf="launch.upcoming else upcoming"  class="upcoming"> {{formatDate()}} </span>
         <ng-template #upcoming>
-            <span class="active"> {{launch.date_utc}} </span>
+            <span class="active"> {{formatDate()}} </span>
 
             <span *ngIf="launch.success else failed"  class="active">- Exitoso </span>
             <ng-template #failed>
@@ -38,11 +38,13 @@
     
     <p> {{launch.details}} </p>
 
-    <!-- TODO: embeb video-->
-    <iframe [src]='safeURL' frameborder="0"></iframe>s
+    <!-- NTH: embeb video
+        <iframe [src]='safeURL' frameborder="0"></iframe>
+    -->
+    
 </div>
 
-<section class="semi-container card-list">
+<section *ngIf="launch.links.flickr.original.length > 0 || launch.links.flickr.small.length > 0 " class="semi-container card-list">
     <span *ngFor="let img of launch.links.flickr.original">
         <image-card image={{img}}></image-card>
     </span>
