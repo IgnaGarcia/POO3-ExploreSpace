@@ -14,7 +14,6 @@ import { Base } from 'src/app/models/base.model';
 //NTH: traducciones de lo que sea necesario
 //REVIEW: responsive banner
 //REVIEW: texto y video sobre starlink
-//REVIEW: iconos de links
 @Component({
     selector: 'spaceX-page',
     templateUrl: './spacex.component.html',

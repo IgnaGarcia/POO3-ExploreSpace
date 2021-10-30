@@ -10,17 +10,42 @@
     </ng-template>
     
     <ul class="flex">
-        <li><a href={{launch.links.wikipedia}}>a</a></li>
-        <li><a href={{launch.links.article}}>a</a></li>
-        <li><a href={{launch.links.webcast}}>a</a></li>
-        <li><a href={{launch.links.presskit}}>a</a></li>
-        <li><a href={{launch.links.reddit.launch}}>a</a></li>
+        <li *ngIf="launch.links.wikipedia"><a href={{launch.links.wikipedia}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-wikipedia-w fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li *ngIf="launch.links.article"><a href={{launch.links.article}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="far fa-newspaper fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li *ngIf="launch.links.webcast"><a href={{launch.links.webcast}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li *ngIf="launch.links.reddit.launch"><a href={{launch.links.reddit.launch}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-reddit-alien fa-stack-1x"></i>
+              </span>
+        </a></li>
     </ul>
 </div>
 
 <div class="buttons container flex">
-    <button class="brd-primary" *ngIf="hasPrevius()" (click)=getPrevius()> <- Anterior </button>
-    <button class="brd-primary" *ngIf="hasNext()" (click)=getNext()> Siguiente -> </button>
+    <button class="brd-primary" *ngIf="hasPrevius()" (click)=getPrevius()> 
+        <i class="fas fa-arrow-left c-white"></i> 
+        Anterior 
+    </button>
+    <button class="brd-primary" *ngIf="hasNext()" (click)=getNext()> 
+        Siguiente 
+        <i class="fas fa-arrow-right c-white"></i>
+    </button>
 </div>
 
 <div class="info container">

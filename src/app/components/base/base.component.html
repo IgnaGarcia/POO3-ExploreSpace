@@ -7,7 +7,10 @@
                 <h3 class="flex p1">{{base.name}}</h3>   
             </div> 
             <a *ngIf="base.wikipedia" href={{base.wikipedia}}>
-                ICON WIKI
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-wikipedia-w fa-stack-1x"></i>
+                  </span>
             </a>
         </div>
 

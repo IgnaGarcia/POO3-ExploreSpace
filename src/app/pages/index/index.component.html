@@ -21,7 +21,10 @@
         <normal-event-component *ngFor="let launch of launches" [event]="launch"> </normal-event-component>    
     </div>
     <div class="flex buttons">
-        <button class="btn bg-primary" (click)="btnClick('/calendario')">Ver mas</button>
+        <button class="btn bg-primary" (click)="btnClick('/calendario')">
+            <i class="far fa-calendar-alt"></i>
+            Ver mas
+        </button>
         <!-- NTH <button class="btn bg-primary">Activar notificaciones</button>-->
     </div>
 </div>
@@ -35,7 +38,10 @@
             <p class="text"> {{launch.name}} realizado el <span> {{formatDate()}} </span> </p>
 
             <!-- FIX: bug de boton -->
-            <button class="btn bg-secondary" (click)="btnClick('/lanzamientos')"> Ver mas </button>
+            <button class="btn brd-secondary" (click)="btnClick('/lanzamientos')"> 
+                <i class="fas fa-space-shuttle c-white"></i>
+                Ver mas 
+            </button>
         </div>
         <!-- embeb video real de lanzamiento -->
         <iframe src="https://www.youtube.com/embed/4372QYiPZB4" allowfullscreen></iframe>
@@ -51,13 +57,19 @@
                 <img [src]="img.hdurl"/>
             </li>
         </ul>
-        <button class="btn bg-primary" (click)="btnClick('/galeria')"> Ver mas </button>
+        <button class="btn bg-primary" (click)="btnClick('/galeria')"> 
+            <i class="far fa-images"></i>
+            Ver mas 
+        </button>
     </article>
 
     <article class="flex explore-section">
         <h3 class="h1"> Explore </h3>
         <!-- TODO: texto lindo -->
         <p> Visita estas otras paginas donde podras seguir aprendiendo sobre la exploracion espacial </p>
-        <button class="btn bg-secondary" (click)="btnClick('/galeria')"> Explorar </button>
+        <button class="btn bg-secondary" (click)="btnClick('/galeria')"> 
+            <i class="fab fa-wpexplorer"></i>
+            Explorar 
+        </button>
     </article>
 </section>

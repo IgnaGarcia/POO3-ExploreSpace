@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Rocket } from 'src/app/models/rocket.model';
 
-//TODO: icono de wiki
 @Component({
     selector: 'rocket-card',
     templateUrl: './rocket.component.html',

@@ -36,13 +36,42 @@
     </svg>
     <img src="../../../assets/img/banner.jpg">
     <ul class="flex">
-        <li><a href={{company.links.website}}>a</a></li>
-        <li><a href={{company.links.flickr}}>a</a></li>
-        <li><a href={{company.links.twitter}}>a</a></li>
-        <li><a href="facebook">a</a></li>
-        <li><a href="instagram">a</a></li>
-        <li><a href="wikipedia">a</a></li>
-        <li><a href="youtube">a</a></li>
+        <li><a href={{company.links.website}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fas fa-globe fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li><a href={{company.links.flickr}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-flickr fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li><a href={{company.links.twitter}}>
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li><a href="https://www.instagram.com/spacex/?hl=es">
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li><a href="https://es.wikipedia.org/wiki/SpaceX">
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-wikipedia-w fa-stack-1x"></i>
+              </span>
+        </a></li>
+        <li><a href="https://www.youtube.com/user/spacexchannel">
+            <span class="fa-stack">
+                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x"></i>
+              </span>
+        </a></li>
     </ul>
 </div>
 
@@ -61,8 +90,14 @@
     </ul>
 
     <div class="flex container">
-        <button class="btn btn-basic bg-secondary" (click)="btnClick('/lanzamientos')"> Ver Lanzamientos </button>
-        <button class="btn brd-secondary" (click)="btnClick('/calendario')"> Ver Calendario </button>
+        <button class="btn btn-basic bg-secondary" (click)="btnClick('/lanzamientos')">
+            <i class="fas fa-space-shuttle c-white"></i> 
+            Ver Lanzamientos 
+        </button>
+        <button class="btn brd-secondary" (click)="btnClick('/calendario')"> 
+            <i class="far fa-calendar-alt"></i>
+            Ver Calendario 
+        </button>
     </div>
 </div>
 

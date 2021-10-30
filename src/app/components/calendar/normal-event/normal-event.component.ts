@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Launch } from 'src/app/models/launch.model';
 
-//TODO: icono desde fontawesome, icomoon o como paso luqui
 @Component({
     selector: 'normal-event-component',
     templateUrl: './normal-event.component.html',

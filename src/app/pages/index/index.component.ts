@@ -6,7 +6,6 @@ import { Apod } from 'src/app/models/apod.model';
 import { SpaceXService } from 'src/app/services/spacex.service';
 import { ApodService } from '../../services/apod.service'
 
-//TODO: seccion de galeria (vertical)
 //TODO: seccion de explorar espacio (vertical)
 @Component({
     selector: 'index-page',

@@ -8,7 +8,10 @@
                 <h3 class="flex p1">{{member.name}}</h3>    
             </div>
             <a *ngIf="member.wikipedia" href={{member.wikipedia}}>
-                ICON WIKI
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-wikipedia-w fa-stack-1x"></i>
+                  </span>
             </a>
         </div>
 

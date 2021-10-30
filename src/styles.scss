@@ -239,8 +239,18 @@ button, .btn{
       list-style: none;
       li, a{
           width: 40px;
-          background: red;
+          background: transparent;
           margin: 0 10px;
+          span, i{
+            background: transparent;
+          }
       }
   }
+}
+
+i {
+  background: transparent;
+}
+.fa-space-shuttle {
+  transform: rotate(-45deg);
 }
