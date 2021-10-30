@@ -1,20 +1,33 @@
+@import "../../../assets/var";
+
 .banner-img {
     .shadow{
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-direction: column;
     }
    .patch{
         object-fit: contain;
-        max-height: 40vh;
+        max-height: 18vh;
         background: transparent;
         text-align: left;
         width: auto;
-        display: block;
+        display: block;   
     }
     .d2{
         background: transparent;
         width: auto;
         display: block;
         text-align: left;
+    }
+    @media (min-width: $bkp-md) {
+        .patch{ max-height: 30vh; }
+        .shadow { 
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+    @media (min-width: $bkp-lg) {
+        .patch{ max-height: 40vh; }
     }
 }
 

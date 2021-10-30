@@ -12,7 +12,6 @@ import { Base } from 'src/app/models/base.model';
 
 //NTH: boton de ver calendario con filtro de solo lanzamientos incluidos 
 //NTH: traducciones de lo que sea necesario
-//REVIEW: responsive banner
 //REVIEW: texto y video sobre starlink
 @Component({
     selector: 'spaceX-page',

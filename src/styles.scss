@@ -214,18 +214,18 @@ button, .btn{
 .banner-img{
   text-align: center;
   margin-top: -2em;
-  max-height: 80vh;
+  max-height: 40vh;
   width: 100%;
   position: relative;
   .shadow{
       position: absolute;
-      box-shadow: inset 0px 0 400px 100px $eerie-black;
+      box-shadow: inset 0px 0 200px 50px $eerie-black;
       width: 100%;
-      height: 80vh;
+      height: 40vh;
       background: transparent;
   }
   img{
-      height: 80vh;
+      height: 40vh;
       width: 100%;
       object-fit: cover;
   }
@@ -233,7 +233,7 @@ button, .btn{
       z-index: 10;
       position: relative;
       bottom: 3em;
-      right: 2em;
+      right: .7em;
       justify-content: flex-end;
       background: transparent;
       list-style: none;
@@ -245,6 +245,31 @@ button, .btn{
             background: transparent;
           }
       }
+  }
+
+  @media (min-width: $bkp-md) {
+    max-height: 60vh;
+    img, .shadow{
+      height: 60vh;
+    }
+    .shadow{
+      box-shadow: inset 0px 0 300px 75x $eerie-black;
+    }
+    ul{
+      right: 1.4em;
+    }
+  }
+  @media (min-width: $bkp-lg) {
+    max-height: 80vh;
+    img, .shadow{
+      height: 80vh;
+    }
+    .shadow{
+      box-shadow: inset 0px 0 400px 100px $eerie-black;
+    }
+    ul{
+      right: 2em;
+    }
   }
 }
 
