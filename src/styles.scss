@@ -66,6 +66,7 @@ body {
 }
 .mat-typography { font-family: 'Nunito Sans', Roboto, Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;  }
 
+/* CONTAINERS */
 .flex{
   display: flex;
   align-items: center;
@@ -96,6 +97,8 @@ body {
   }
 }
 
+ /* BUTTONS */
+ //REVIEW: responsive design
 button, .btn{
   border: none;
   border-radius: 10px;
@@ -120,6 +123,7 @@ button, .btn{
   border-radius: 100px;
 }
 
+/* SCROL BAR */
 .h-scroll{
   display: flex;
   align-items: center;
@@ -130,20 +134,14 @@ button, .btn{
   width: 10px;
   height: 7px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: $soft-bg;
   border-radius: 15px;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: $primary-400-50;
   border-radius: 15px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $primary-400;
 }
@@ -151,6 +149,7 @@ button, .btn{
   fill: $cultured;
 }
 
+/* CARDS */
 .card-list{
   display: flex;
   justify-content: space-between;
@@ -159,18 +158,16 @@ button, .btn{
   margin: 0 0.75em;
 }
 
-
-//REVIEW: responsive design
 .card{
   position: relative;
   border-radius: 15px;
   margin: .5em .8em;
   border: 1px solid $secondary-400;
-  height: 450px;
+  height: 350px;
   img{
       border-radius: 15px;
       aspect-ratio: 5/6;
-      height: 447px;
+      height: 348px;
       object-fit: cover;
   }
   &:hover{
@@ -198,9 +195,25 @@ button, .btn{
     &>* {
         margin-bottom: 15px;
     }
-}
+  }
+
+  @media (min-width: $bkp-md) {
+    height: 400px;
+    
+    img{
+      height: 397px;
+    }
+  }
+  @media (min-width: $bkp-lg) {
+    height: 450px;
+    
+    img{
+      height: 447px;
+    }
+  }
 }
 
+/* STATUS */
 .active{
   color: green;
 }
@@ -211,6 +224,7 @@ button, .btn{
   color: rgb(255, 225, 0);
 }
 
+/* BANNER */
 .banner-img{
   text-align: center;
   margin-top: -2em;
@@ -230,7 +244,7 @@ button, .btn{
       object-fit: cover;
   }
   ul{
-      z-index: 10;
+      z-index: 0;
       position: relative;
       bottom: 3em;
       right: .7em;
@@ -273,6 +287,7 @@ button, .btn{
   }
 }
 
+/* ICONS */
 i {
   background: transparent;
 }
