@@ -40,12 +40,11 @@ div.info{
     }
 }
 
-//REVIEW: responsive design
 div.starlink{
     margin-top: 5vh;
     margin-bottom: 10vh;
     background: $primary-600;
-    padding: 1.5em 0;
+    padding: .5em 0;
     * {
         background: transparent;
     }
@@ -54,9 +53,7 @@ div.starlink{
         flex-wrap: wrap;
     }
     .column{
-        flex: 0 1 45%;
-        padding: 1.5em 1em 1.5em 0;
-        
+        padding: .6em; 
         h3{
             font-style: italic;
             text-align: center;
@@ -83,6 +80,14 @@ div.starlink{
         aspect-ratio: 16/9;
         height: auto;
         margin-bottom: -3em;
+    }
+   
+    @media (min-width: $bkp-lg) {
+        padding: 1.5em 0;
+        .column{
+            flex: 0 1 45%;
+            padding: 1.5em 1em 1.5em 0;
+        }
     }
 }
 

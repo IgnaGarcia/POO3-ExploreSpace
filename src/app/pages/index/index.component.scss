@@ -55,7 +55,7 @@ div.launch {
   margin-top: 2em;
   margin-bottom: 3em;
   background: $primary-600;
-  padding: 1.5em 0;
+  padding: .5em 0;
 
   * {
     background: transparent;
@@ -67,8 +67,7 @@ div.launch {
   }
 
   .column {
-    flex: 0 1 45%;
-    padding: 1.5em 1em 1.5em 0;
+    padding: .6em;
     text-align: center;
 
     h3 {
@@ -100,19 +99,29 @@ div.launch {
     height: auto;
     margin-bottom: -3em;
   }
+  
+  @media (min-width: $bkp-lg) {
+      padding: 1.5em 0;
+      .column{
+          flex: 0 1 45%;
+          padding: 1.5em 1em 1.5em 0;
+      }
+  }
 }
 
 .sections{
     align-items: stretch;
+    flex-wrap: wrap;
     margin-top: 4em;
+    @media (min-width: $bkp-lg) {
+      flex-wrap: nowrap;
+    }
 }
 
-
-//REVIEW: responsive design
 .galery-section,
 .explore-section {
   width: 100%;
-  padding: 2em .5em;
+  padding: 1em .5em;
   flex-direction: column;
 
   p,
@@ -126,9 +135,12 @@ div.launch {
     font-family: 'Goldman', sans-serif;
     font-style: italic;
   }
+  
+  @media (min-width: $bkp-md) {
+    padding: 2em .5em;
+  }
 }
 
-//REVIEW: responsive design
 .galery-section {
   background: $secondary-400;
 
@@ -142,7 +154,7 @@ div.launch {
 
     li {
       list-style: none;
-      height: 200px;
+      height: 150px;
       flex-grow: 1;
     }
 
@@ -151,6 +163,11 @@ div.launch {
       min-width: 100%;
       object-fit: cover;
       vertical-align: bottom;
+    }
+    @media (min-width: $bkp-md) {
+      li {
+        height: 200px;
+      }
     }
   }
 }

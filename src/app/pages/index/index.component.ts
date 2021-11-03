@@ -27,7 +27,7 @@ export class IndexComponent {
             .subscribe((res: Launch) => this.launch = res)
         this._spaceXService.getUpcomingLaunches()
             .subscribe((res: Array<Launch>) => this.launches.push(...res))
-        this._apodService.getApods('2021-10-18', '2021-10-25')
+        this._apodService.getApods('2021-10-27', '2021-10-29')
             .subscribe((res: Array<Apod>) =>  this.gallery.push(...res) );
     }
     
