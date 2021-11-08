@@ -37,41 +37,41 @@
     <img src="../../../assets/img/banner.jpg">
     <ul class="flex">
         <li><a href={{company.links.website}}>
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fas fa-globe fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fas fa-globe fa-stack-1x"></i>
+                </span>
+            </a></li>
         <li><a href={{company.links.flickr}}>
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fab fa-flickr fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-flickr fa-stack-1x"></i>
+                </span>
+            </a></li>
         <li><a href={{company.links.twitter}}>
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                </span>
+            </a></li>
         <li><a href="https://www.instagram.com/spacex/?hl=es">
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fab fa-instagram fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
+                </span>
+            </a></li>
         <li><a href="https://es.wikipedia.org/wiki/SpaceX">
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fab fa-wikipedia-w fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-wikipedia-w fa-stack-1x"></i>
+                </span>
+            </a></li>
         <li><a href="https://www.youtube.com/user/spacexchannel">
-            <span class="fa-stack">
-                <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
-                <i class="fab fa-youtube fa-stack-1x"></i>
-              </span>
-        </a></li>
+                <span class="fa-stack">
+                    <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                    <i class="fab fa-youtube fa-stack-1x"></i>
+                </span>
+            </a></li>
     </ul>
 </div>
 
@@ -81,9 +81,9 @@
         <li>- Fundada en {{company.founded}} por <a href={{company.links.elon_twitter}}>{{company.founder}}</a></li>
         <li>- Valuada en ${{company.valuation}} dolares</li>
         <li>- A cargo de {{company.employees}} empleados</li>
-        <li>- Dirigida por 
-            {{company.ceo}}(CEO), 
-            {{company.cto}}(CTO), 
+        <li>- Dirigida por
+            {{company.ceo}}(CEO),
+            {{company.cto}}(CTO),
             {{company.coo}}(COO),
             {{company.cto_propulsion}}(CTO PROPULSION)
         </li>
@@ -91,12 +91,12 @@
 
     <div class="flex container">
         <button class="btn btn-basic bg-secondary" (click)="btnClick('/lanzamientos')">
-            <i class="fas fa-space-shuttle c-white"></i> 
-            Lanzamientos 
+            <i class="fas fa-space-shuttle c-white"></i>
+            Lanzamientos
         </button>
-        <button class="btn brd-secondary" (click)="btnClick('/calendario')"> 
+        <button class="btn brd-secondary" (click)="btnClick('/calendario')">
             <i class="far fa-calendar-alt"></i>
-            Calendario 
+            Calendario
         </button>
     </div>
 </div>
@@ -105,13 +105,17 @@
     <div class="container">
         <div class="column">
             <h3 class="h1">STARLINK</h3>
-            <p class="text">lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip
-                lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum
-                dolor sit amet, consectetur adip.</p>
-            <p class="stat" *ngIf="activeStarlink != undefined"> <span>Satelites Activos:</span> 
+            <p class="text">
+                Es una empresa que nació como proyecto de SpaceX para la creación de una constelación de satélites de
+                internet​ con el objetivo de brindar un servicio de internet de banda ancha, baja latencia y cobertura
+                mundial a bajo coste. A largo plazo, SpaceX pretende desarrollar e implementar una versión de este
+                sistema en Marte. A mediano plazo se pretende que este proyecto genere ingresos para financiar el
+                proyecto de transporte de Marte.
+            </p>
+            <p class="stat" *ngIf="activeStarlink != undefined"> <span>Satelites Activos:</span>
                 {{ activeStarlink.totalDocs }} ({{getActiveP()}}%)
             </p>
-            <p class="stat" *ngIf="inactiveStarlink != undefined"> <span>Satelites Inactivos:</span> 
+            <p class="stat" *ngIf="inactiveStarlink != undefined"> <span>Satelites Inactivos:</span>
                 {{ inactiveStarlink.totalDocs }} ({{getInactiveP()}}%)
             </p>
         </div>

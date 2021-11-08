@@ -1,21 +1,17 @@
 <div class="banner-img">
     <img src="../../../assets//img/banner.jpg"/>
     <div class="shadow flex">
-        <h1 class="d1 text-glow-s"> Explore </h1>  
-        <p>
-            <!-- TODO: texto lindo -->
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ipsum
-            similique quis eum ea excepturi, a illo eos voluptate quia optio dicta
-            iste quam, aut veritatis consequatur, aliquid tenetur veniam?
-        </p>
+        <h1 class="d1 text-glow-s"> Space Voyager </h1>  
+        <h2 class="h2">
+            El universo a un click
+        </h2>
     </div>
 </div>
 
 <div class="minicalendar">
     <div class="container info">
         <h2 class="h2 c-secondary-400">Proximos Eventos</h2>
-        <!-- TODO: texto lindo -->
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim corporis vero atque minima eum illo consectetur quasi minus? Sequi facilis maiores </p>
+        <p> En la seccion de calendario encontraras los proximos eventos astronomicos de interes tal como lanzamientos, eclipses, lunas especiales y demas, ademas tendras la opcion de activar notificaciones para que no te pierdas ninguno </p>
     </div>
     <div class="h-scroll semi-container grid">  
         <normal-event-component *ngFor="let launch of launches" [event]="launch"> </normal-event-component>    
@@ -51,7 +47,7 @@
 <section class="flex sections semi-container">
     <article class="flex galery-section">
         <h3 class="h1"> Galeria </h3>
-        <p> Ven a explorar la galeria de imagenes que se actualiza a diario </p>
+        <p> Ven a explorar la galeria oficial de la NASA </p>
         <ul class="images">
             <li *ngFor="let img of gallery">
                 <img [src]="img.hdurl"/>
@@ -64,9 +60,8 @@
     </article>
 
     <article class="flex explore-section">
-        <h3 class="h1"> Explore </h3>
-        <!-- TODO: texto lindo -->
-        <p> Visita estas otras paginas donde podras seguir aprendiendo sobre la exploracion espacial </p>
+        <h3 class="h1"> Explorar </h3>
+        <p> Te recomendamos que visites estas otras paginas donde encontraras contenidos de interes para seguir aprendiendo y manteniendote actualizado de las ultimas novedades </p>
         <button class="btn bg-secondary" (click)="btnClick('/galeria')"> 
             <i class="fab fa-wpexplorer"></i>
             Explorar 

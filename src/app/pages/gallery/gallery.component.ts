@@ -3,7 +3,6 @@ import { Apod } from 'src/app/models/apod.model';
 import { ApodService } from '../../services/apod.service'
 import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
-//TODO: loader
 //TODO: imagenes onClick que carguen un overlay con la descripcion
 //NTH: boton de cargar mas que invoque a la funcion
 //NTH: boton de traducir automaticamente en cada descripcion visualizada
@@ -18,6 +17,7 @@ export class GalleryComponent {
     firstApod: Apod;
     safeURL: SafeUrl;
     gallery: Array<Apod>;
+    loading: Boolean= true;
 
     constructor(private _apodService: ApodService, private sanitizer: DomSanitizer) {
         this.gallery = new Array<Apod>();
@@ -34,6 +34,8 @@ export class GalleryComponent {
                 
                 this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.getUrl());
                 this.gallery.push(...res.slice(0, res.length-1).reverse())
+
+                this.loading = false;
             });
     }
 

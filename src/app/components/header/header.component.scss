@@ -3,11 +3,17 @@
 .main-link {
   font-weight: bold;
   display: inline;
+  font-family: 'Goldman', sans-serif;
+  font-size: $font-h1;
+  @media (min-width: $bkp-lg) {
+    font-size: $font-h2;
+  }
+  @media (min-width: $bkp-xl) {  
+    font-size: $font-h1;
+  }
 }
 
 .flex {
-  padding: 10px 10px 5px;
-  margin-bottom: 2em;
   align-items: center;
 }
 

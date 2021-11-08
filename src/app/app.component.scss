@@ -1,6 +1,14 @@
 @import "../assets/var";
 main{
     padding-bottom: 300px;
+    padding-top: 65px;
+}
+header-component{
+  padding: 10px;
+  border-bottom: 1px solid $primary-400;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 footer-component {
   border-top: 1px solid $primary-400;
