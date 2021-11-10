@@ -24,12 +24,16 @@ export class LaunchesComponent {
     }
 
     ngOnInit() {
+        let ytBase = "https://www.youtube.com/embed/";
+
         this._spaceXService.getPastLaunches().subscribe((past: Array<Launch>) => {
             this.launches.push(...past)
             this.cursor = this.launches.length - 1
             this.launch = this.launches[this.cursor]
 
-            this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(this.launch.links.webcast);
+            let splited = this.launch.links.webcast.split("/")
+
+            this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(`${ytBase}${splited[splited.length - 1]}`);
 
             this._spaceXService.getUpcomingLaunches().subscribe((upcoming: Array<Launch>) => {
                 this.launches.push(...upcoming)

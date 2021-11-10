@@ -1,5 +1,5 @@
 <div class="banner-img">
-    <img src="../../../assets//img/banner.jpg"/>
+    <img src="../../../assets/img/banner.jpg"/>
     <div class="shadow flex">
         <h1 class="d1 text-glow-s"> Space Voyager </h1>  
         <h2 class="h2">
@@ -27,20 +27,19 @@
 
 <div class="launch">
     <div class="container">
-        <div class="column">
+        <div id="launchInfo" class="column flex">
             <h3 class="h1"> Lanzamientos </h3>
 
             <p class="text"> En esta seccion podras ver informacion sobre todos los lanzamientos realizados por SpaceX, como por ejemplo: </p>
             <p class="text"> {{launch.name}} realizado el <span> {{formatDate()}} </span> </p>
 
-            <!-- FIX: bug de boton -->
+            <!-- FIX bug de boton -->
             <button class="btn brd-secondary" (click)="btnClick('/lanzamientos')"> 
                 <i class="fas fa-space-shuttle c-white"></i>
                 Ver mas 
             </button>
         </div>
-        <!-- embeb video real de lanzamiento -->
-        <iframe src="https://www.youtube.com/embed/4372QYiPZB4" allowfullscreen></iframe>
+        <iframe [src]="safeURL" allowfullscreen></iframe>
     </div>
 </div>
 

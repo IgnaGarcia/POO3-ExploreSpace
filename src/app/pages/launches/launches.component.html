@@ -63,10 +63,7 @@
     
     <p> {{launch.details}} </p>
 
-    <!-- NTH: embeb video
-        <iframe [src]='safeURL' frameborder="0"></iframe>
-    -->
-    
+    <iframe class="bigIframe" [src]='safeURL' frameborder="0"></iframe>  
 </div>
 
 <section *ngIf="launch.links.flickr.original.length > 0 || launch.links.flickr.small.length > 0 " class="semi-container card-list">

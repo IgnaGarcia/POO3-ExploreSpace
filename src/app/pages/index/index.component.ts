@@ -5,6 +5,7 @@ import { Launch } from 'src/app/models/launch.model';
 import { Apod } from 'src/app/models/apod.model';
 import { SpaceXService } from 'src/app/services/spacex.service';
 import { ApodService } from '../../services/apod.service'
+import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 //TODO: seccion de explorar espacio (vertical)
 @Component({
@@ -16,15 +17,24 @@ export class IndexComponent {
     launches: Array<Launch>;
     gallery: Array<Apod>;
     launch: Launch;
+    safeURL: SafeUrl;
 
-    constructor(private _spaceXService: SpaceXService, private router: Router, private _apodService: ApodService) {
+    constructor(private _spaceXService: SpaceXService, private router: Router, private _apodService: ApodService, private sanitizer: DomSanitizer) {
         this.launches = new Array<Launch>();
         this.gallery = new Array<Apod>();
     }
 
     ngOnInit() {
         this._spaceXService.getLatestLaunches()
-            .subscribe((res: Launch) => this.launch = res)
+            .subscribe((res: Launch) => {
+                this.launch = res
+                let ytBase = "https://www.youtube.com/embed/";
+                let splited = this.launch.links.webcast.split("/")
+
+                this.safeURL = this.sanitizer.bypassSecurityTrustResourceUrl(`${ytBase}${splited[splited.length - 1]}`);
+                console.log(this.safeURL);
+            })
+            
         this._spaceXService.getUpcomingLaunches()
             .subscribe((res: Array<Launch>) => this.launches.push(...res))
         this._apodService.getApods('2021-10-27', '2021-10-29')

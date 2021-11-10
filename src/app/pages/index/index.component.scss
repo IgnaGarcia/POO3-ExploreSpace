@@ -92,7 +92,9 @@ div.launch {
       margin-top: 1em;
     }
   }
-
+  #launchInfo{
+    flex-direction: column;
+  }
   iframe {
     flex: 1 1 45%;
     aspect-ratio: 16/9;
