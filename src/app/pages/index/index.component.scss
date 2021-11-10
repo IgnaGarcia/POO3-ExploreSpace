@@ -87,37 +87,45 @@ div.launch {
       font-style: italic;
       color: $eerie-black;
     }
-
-    button {
+    
+    .brd-secondary{
       margin-top: 1em;
+      border: 2px solid $secondary-400;
+      &:hover{
+        background-color: $secondary-400;
+      }
     }
   }
-  #launchInfo{
+
+  #launchInfo {
     flex-direction: column;
   }
+
   iframe {
     flex: 1 1 45%;
     aspect-ratio: 16/9;
     height: auto;
     margin-bottom: -3em;
   }
-  
+
   @media (min-width: $bkp-lg) {
-      padding: 1.5em 0;
-      .column{
-          flex: 0 1 45%;
-          padding: 1.5em 1em 1.5em 0;
-      }
+    padding: 1.5em 0;
+
+    .column {
+      flex: 0 1 45%;
+      padding: 1.5em 1em 1.5em 0;
+    }
   }
 }
 
-.sections{
-    align-items: stretch;
-    flex-wrap: wrap;
-    margin-top: 4em;
-    @media (min-width: $bkp-lg) {
-      flex-wrap: nowrap;
-    }
+.sections {
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 4em;
+
+  @media (min-width: $bkp-lg) {
+    flex-wrap: nowrap;
+  }
 }
 
 .galery-section,
@@ -137,7 +145,7 @@ div.launch {
     font-family: 'Goldman', sans-serif;
     font-style: italic;
   }
-  
+
   @media (min-width: $bkp-md) {
     padding: 2em .5em;
   }
@@ -166,6 +174,7 @@ div.launch {
       object-fit: cover;
       vertical-align: bottom;
     }
+
     @media (min-width: $bkp-md) {
       li {
         height: 200px;
