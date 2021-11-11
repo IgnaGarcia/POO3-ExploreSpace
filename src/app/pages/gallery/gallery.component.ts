@@ -4,7 +4,6 @@ import { ApodService } from '../../services/apod.service'
 import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 //TODO: imagenes onClick que carguen un overlay con la descripcion
-//NTH: boton de traducir automaticamente en cada descripcion visualizada
 @Component({
     selector: 'gallery-page',
     templateUrl: './gallery.component.html',

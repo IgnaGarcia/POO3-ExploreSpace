@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
-//NTH: icono de astronauta perdido en el espacio
-//NTH: mensaje de pagina no encontrada
-//NTH: boton para ir al inicio del website
 @Component({
     selector: 'notFound-page',
     templateUrl: './notFound.component.html',
@@ -11,7 +9,9 @@ import { Component } from '@angular/core';
 
 export class NotFoundComponent {
 
-    constructor() {
-        console.log('load galery page');
+    constructor(private router: Router) { }
+
+    btnClick(url: string){
+        this.router.navigateByUrl(url)
     }
 }

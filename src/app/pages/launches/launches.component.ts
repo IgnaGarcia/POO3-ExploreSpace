@@ -5,7 +5,6 @@ import { SpaceXService } from '../../services/spacex.service'
 import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 //NTH: boton de activar recordatorio si es pendiente
-//NTH: boton para traducir descripcion
 @Component({
     selector: 'launches-page',
     templateUrl: './launches.component.html',

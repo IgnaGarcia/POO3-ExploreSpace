@@ -1,0 +1,43 @@
+@import "../../../assets/var";
+
+.flex {
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 60vh;
+}
+
+h1 {
+  flex: 1 1 50%;
+  font-size: $font-d2;
+  font-family: 'Goldman', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  @media (min-width: $bkp-md) {
+      font-size: $font-d1;
+  }
+}
+
+i {
+  flex: 1 1 50%;
+  color: $primary-400;
+  animation: rotate 5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+div {
+  text-align: center;
+}
