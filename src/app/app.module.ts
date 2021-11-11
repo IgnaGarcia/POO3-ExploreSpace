@@ -10,6 +10,7 @@ import { LaunchesModule } from './pages/launches/launches.module';
 import { GaleryModule } from './pages/gallery/gallery.module';
 import { SpaceXModule } from './pages/spaceX/spacex.module';
 import { CalendarModule } from './pages/calendar/calendar.module';
+import { ExploreModule } from './pages/explore/explore.module';
 import { NotFoundModule } from './pages/notFound/notFount.module';
 
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     SpaceXModule,
     GaleryModule,
     CalendarModule,
+    ExploreModule,
     NotFoundModule,
     BrowserAnimationsModule,
     MatSidenavModule

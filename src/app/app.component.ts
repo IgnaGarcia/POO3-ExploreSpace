@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 
-//NTH: pagina y navegacion de explore
-  //NTH: card a explorar(titulo, descripcion, boton, video, lista de imagenes)
-  //NTH: lista de card a explorar
-  //NTH: Titulo y descripcion principal
 //NTH: pagina y navegacion de wiki
   //NTH: card de divilgador
   //NTH: lista de divulgadores

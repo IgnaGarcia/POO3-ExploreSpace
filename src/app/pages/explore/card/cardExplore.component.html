@@ -1,0 +1,9 @@
+<li>
+    <h3>{{explore.name}}</h3>
+    <p>{{explore.details}}</p>
+    <img [src]="explore.banner" alt="" height="50px">
+    <button>ir</button>
+    <ul>
+        <li *ngFor="let img of explore.images"><img [src]="img" height="100px"></li>
+    </ul>
+</li>
