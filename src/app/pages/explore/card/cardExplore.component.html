@@ -1,9 +1,14 @@
-<li>
-    <h3>{{explore.name}}</h3>
-    <p>{{explore.details}}</p>
-    <img [src]="explore.banner" alt="" height="50px">
-    <button>ir</button>
-    <ul>
-        <li *ngFor="let img of explore.images"><img [src]="img" height="100px"></li>
+<li class="explore-card">
+    <section class="flex container">
+        <article [ngClass]="{'right': explore.id % 2 == 1, 'left': explore.id % 2 == 0}">
+            <h3 class="h1">{{explore.name}}</h3>
+            <p calss="p1 lead">{{explore.details}}</p>
+            <a class="btn bg-secondary" [href]="explore.url">Explorar</a>
+        </article>
+
+        <img [src]="explore.banner" alt="">
+    </section>
+    <ul class="card-list semi-container">
+        <li *ngFor="let img of explore.images"><img [src]="img"></li>
     </ul>
 </li>

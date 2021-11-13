@@ -1,4 +1,5 @@
 /* COLORS */
+$black-25: #00000045;
 $black-50: #00000075;
 $black-75: #000000AA;
 $eerie-black: #151515;
@@ -12,6 +13,7 @@ $pink-pantone: #e35095;
 $plum: #9c4092;
 $plum-50: #9c409275;
 $midnight: #522464;
+$lead: #A0A4B0;
 $gainsboro: #dddddd;
 $cultured: #eeeeee;
 
@@ -38,6 +40,9 @@ $i-secondary-200:  $soft-black;
 $i-secondary-400:  $gainsboro;
 $i-secondary-600:  $cultured;
 
+.lead{
+  color: $lead;
+}
 .c-white{
   color: $text;
 }

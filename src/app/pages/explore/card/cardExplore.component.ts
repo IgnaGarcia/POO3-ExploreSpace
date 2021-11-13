@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Explore } from 'src/app/models/explore.model';
 
-//TODO: card a explorar(titulo, descripcion, boton, video, lista de imagenes)
 @Component({
     selector: 'card-explore',
     templateUrl: './cardExplore.component.html',

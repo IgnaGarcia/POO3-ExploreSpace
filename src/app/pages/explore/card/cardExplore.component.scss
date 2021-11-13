@@ -1,0 +1,119 @@
+@import "../../../../assets/var";
+
+.explore-card {
+  margin: 0 auto;
+  padding: 2em 0;
+
+  &:hover {
+    background-color: $black-25;
+  }
+}
+
+section {
+  background: transparent;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  article {
+    background: transparent;
+    display: flex;
+    width: 350px;
+
+    flex-direction: column;
+    margin-bottom: 1em;
+    align-items: start;
+    p, h3{ background: transparent }
+    p {
+        margin: .5em 0;
+    }
+    .btn {
+        line-height: 1.5;
+        margin: 0 auto;
+    }
+  }
+
+  img {
+    aspect-ratio: 16/9;
+    width: 350px;
+    border-radius: 15px;
+    border: 2px solid $primary-400;
+  }
+
+  @media (min-width: $bkp-md){
+    article {
+        width: auto;
+        flex: 1 1 auto;
+        align-items: stretch;
+    }
+    .left {
+      order: 0;
+      text-align: right;
+      margin-right: 2em;
+      .h1{ margin-right: 1em;}
+    }
+    .right {
+      order: 2;
+      text-align: left;
+      margin-left: 2em;
+      .h1{ margin-left: 1em;}
+    }
+    img {
+        order: 1;
+        width: 400px;
+        opacity: 0.6;
+  
+        &:hover {
+          opacity: 1;
+          box-shadow: 0px 0px 4px $primary-400;
+        }
+      }
+
+  }
+  @media (min-width: $bkp-lg) {
+    align-items: stretch;
+    article{
+        justify-content: space-evenly;
+    }
+    img {
+      width: 500px;
+    }
+  }
+  @media (min-width: $bkp-xl) {
+    img {
+      width: 700px;
+    }
+  }
+}
+
+ul {
+  display: none;
+
+  @media (min-width: $bkp-lg) {
+    display: flex;
+    background: transparent;
+    list-style: none;
+    margin: auto;
+
+    li {
+      img {
+        aspect-ratio: 16/9;
+        border-radius: 15px;
+        border: 2px solid $primary-400;
+        width: 400px;
+        opacity: 0.6;
+
+        &:hover {
+          opacity: 1;
+          box-shadow: 0px 0px 5px $primary-400;
+        }
+        @media (min-width: $bkp-xl) {
+          width: 450px;
+        }
+      }
+
+      margin: 1em 2em 1em 0;
+      border-radius: 15px;
+    }
+  }
+
+}

@@ -1,5 +1,6 @@
 import { Explore } from '../models/explore.model';
 
+//TODO: cargar data
 export const ExploreMock: Explore[] = [
     {
         id: 0,
@@ -14,7 +15,7 @@ export const ExploreMock: Explore[] = [
         name: 'string',
         details: 'string',
         url: 'string',
-        banner: 'string',
+        banner: 'assets/img/banner.jpg',
         images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
     },
     {
@@ -22,7 +23,7 @@ export const ExploreMock: Explore[] = [
         name: 'string',
         details: 'string',
         url: 'string',
-        banner: 'string',
+        banner: 'assets/img/banner.jpg',
         images: ["assets/img/banner.jpg", "assets/img/banner.jpg"]
     },
     {
@@ -30,7 +31,7 @@ export const ExploreMock: Explore[] = [
         name: 'string',
         details: 'string',
         url: 'string',
-        banner: 'string',
+        banner: 'assets/img/banner.jpg',
         images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
     },
     {
@@ -38,7 +39,7 @@ export const ExploreMock: Explore[] = [
         name: 'string',
         details: 'string',
         url: 'string',
-        banner: 'string',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: 'assets/img/banner.jpg',
+        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
     }
 ]

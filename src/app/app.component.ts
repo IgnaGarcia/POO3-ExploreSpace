@@ -6,16 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent { }
 
-//NTH: pagina y navegacion de wiki
-  //NTH: card de divilgador
-  //NTH: lista de divulgadores
-  //NTH: card de sitios de interes(divulgacion)
-  //NTH: lista de sitios de interes
-  //NTH: card de posteo
-  //NTH: lista de posteos
+// pagina y navegacion de wiki
+  //NTH: card de divilgador + lista de divulgadores
+  //NTH: card de sitios de interes(divulgacion) + lista de sitios de interes
+  //NTH: card de posteo + lista de posteos
+  //NTH: pagina/overlay de posteo + on click posteo te lleve a su pagina/overlay
   //NTH: busqueda y filtro de posteos
-  //NTH: on click posteo te lleve a su pagina/overlay
-  //NTH: pagina/overlay de posteo
-  //NTH: firebase de posteos
+  //NTH: firebase de posteos para get
   //NTH: peticion de crear posteo
   //NTH: pagina de administrador para revisar posteos
