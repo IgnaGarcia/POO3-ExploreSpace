@@ -4,7 +4,6 @@ import { retry, catchError } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 
 import { Apod } from '../models/apod.model';
-import { env } from 'src/environments/environment';
 
 interface Api {
     apod_url: string
