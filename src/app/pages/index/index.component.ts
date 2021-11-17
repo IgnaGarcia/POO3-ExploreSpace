@@ -7,7 +7,6 @@ import { SpaceXService } from 'src/app/services/spacex.service';
 import { ApodService } from '../../services/apod.service'
 import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
-//TODO: seccion de explorar espacio (vertical)
 @Component({
     selector: 'index-page',
     templateUrl: './index.component.html',
@@ -16,12 +15,14 @@ import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
 export class IndexComponent {
     launches: Array<Launch>;
     gallery: Array<Apod>;
+    exploreGallery: string[];
     launch: Launch;
     safeURL: SafeUrl;
 
     constructor(private _spaceXService: SpaceXService, private router: Router, private _apodService: ApodService, private sanitizer: DomSanitizer) {
         this.launches = new Array<Launch>();
         this.gallery = new Array<Apod>();
+        this.exploreGallery = ["assets/img/eyes/eyes1.png","assets/img/100000stars/100000stars2.png","assets/img/banner.jpg"];
     }
 
     ngOnInit() {

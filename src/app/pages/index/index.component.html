@@ -59,6 +59,11 @@
     <article class="flex explore-section">
         <h3 class="h1"> Explorar </h3>
         <p> Te recomendamos que visites estas otras paginas donde encontraras contenidos de interes para seguir aprendiendo y manteniendote actualizado de las ultimas novedades </p>
+        <ul class="images">
+            <li *ngFor="let v of exploreGallery">
+                <img [src]="v"/>
+            </li>
+        </ul>
         <button class="btn bg-secondary" (click)="btnClick('/galeria')"> 
             <i class="fab fa-wpexplorer"></i>
             Explorar 

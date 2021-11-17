@@ -81,6 +81,11 @@ section {
       width: 700px;
     }
   }
+  @media (min-width: $bkp-xxl){
+    article{
+      flex: 1 1 auto;
+    }
+  }
 }
 
 ul {
