@@ -11,7 +11,8 @@ export const ExploreMock: Explore[] = [
         images: [
             "assets/img/eyes/eyes2.png", 
             "assets/img/eyes/eyes3.png", 
-            "assets/img/eyes/eyes4.png"]
+            "assets/img/eyes/eyes4.png"
+        ]
     },
     {
         id: 1,
@@ -23,46 +24,74 @@ export const ExploreMock: Explore[] = [
             "assets/img/100000stars/100000stars2.png", 
             "assets/img/100000stars/100000stars3.png", 
             "assets/img/100000stars/100000stars4.png", 
-            "assets/img/100000stars/100000stars5.png"]
+            "assets/img/100000stars/100000stars5.png"
+        ]
     },
     {
         id: 2,
         name: 'SpaceX',
-        details: 'string',
+        details: 'Pagina oficial de la empresa privada SpaceX, donde sube noticias, informacion sobre las tecnologias que utiliza, sus misiones y demas contenido de interes.',
         url: 'https://www.spacex.com/',
-        banner: 'assets/img/banner.jpg',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: "assets/img/spaceX/spaceX4.png",
+        images: [
+            "assets/img/spaceX/spaceX1.png", 
+            "assets/img/spaceX/spaceX2.png",
+            "assets/img/spaceX/spaceX3.png",
+            "assets/img/spaceX/spaceX5.png",
+        ]
     },
     {
         id: 3,
         name: 'NASA',
-        details: 'string',
+        details: 'Sitio oficial de la NASA, agencia de exploracion espacial con mas renombre.',
         url: 'https://www.nasa.gov/',
-        banner: 'assets/img/banner.jpg',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: 'assets/img/NASA/5.png',
+        images: [
+            "assets/img/NASA/1.png", 
+            "assets/img/NASA/2.png",
+            "assets/img/NASA/3.png",
+            "assets/img/NASA/4.png",
+        ]
     },
     {
         id: 4,
         name: 'La NASA Español',
-        details: 'string',
+        details: 'Sitio de la NASA con traducciones al español, todas las novedades, eventos astronomicos, entrevistas y todo lo necesario para mantenerse al dia.',
         url: 'https://www.lanasa.net/',
-        banner: 'assets/img/banner.jpg',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: 'assets/img/nasaES/1.png',
+        images: [
+            "assets/img/nasaES/1.png", 
+            "assets/img/nasaES/2.png",
+            "assets/img/nasaES/3.png",
+            "assets/img/nasaES/4.png",
+        ]
     },
     {
         id: 5,
         name: 'SKY & TELESCOPE',
-        details: 'string',
+        details: 'Blog de noticias interesantes, con tutoriales y herramientas utiles, todo orientado a la observacion del cielo y las extrellas.',
         url: 'https://skyandtelescope.org/',
-        banner: 'assets/img/banner.jpg',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: 'assets/img/skyTelescope/0.png',
+        images: [
+            "assets/img/skyTelescope/1.png", 
+            "assets/img/skyTelescope/2.png",
+            "assets/img/skyTelescope/3.png",
+            "assets/img/skyTelescope/4.png",
+            "assets/img/skyTelescope/5.png",
+        ]
     },
     {
         id: 6,
         name: 'NASA Kids',
-        details: 'string',
+        details: 'Pagina super didactica llena de articulos y juegos para aprender jugando, ideal para infantes.',
         url: 'https://spaceplace.nasa.gov/sp/kids/',
-        banner: 'assets/img/banner.jpg',
-        images: ["assets/img/banner.jpg", "assets/img/banner.jpg", "assets/img/banner.jpg"]
+        banner: 'assets/img/nasaKids/0.png',
+        images: [
+            "assets/img/nasaKids/1.png", 
+            "assets/img/nasaKids/2.png",
+            "assets/img/nasaKids/3.png",
+            "assets/img/nasaKids/4.png",
+            "assets/img/nasaKids/5.png",
+        ]
     }
 ]
