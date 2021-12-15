@@ -1,0 +1,52 @@
+<div class="youtuber paper-bg">
+    <div class="youtuber-header">
+        <h3 class="flex h3 c-secondary-200">{{youtuber.name}}</h3>
+        <img class="youtuber-image" src={{youtuber.image}} />
+    </div>
+
+    <div class="youtuber-footer">
+        <p class="p2"> {{youtuber.description}} </p>
+        <ul class="flex">
+            <li *ngIf="youtuber.youtube">
+                <a href={{youtuber.youtube}}>
+                    <span class="fa-stack">
+                        <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                        <i class="fab fa-youtube fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+            <li *ngIf="youtuber.instagram">
+                <a href={{youtuber.instagram}}>
+                    <span class="fa-stack">
+                        <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+            <li *ngIf="youtuber.twitter">
+                <a href={{youtuber.twitter}}>
+                    <span class="fa-stack">
+                        <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+            <li *ngIf="youtuber.twitch">
+                <a href={{youtuber.twitch}}>
+                    <span class="fa-stack">
+                        <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                        <i class="fab fa-twitch fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+            <li *ngIf="youtuber.patreon">
+                <a href={{youtuber.patreon}}>
+                    <span class="fa-stack">
+                        <i class="fas fa-circle c-primary-200 fa-stack-2x"></i>
+                        <i class="fab fa-patreon fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

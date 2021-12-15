@@ -6,6 +6,8 @@ import { Apod } from 'src/app/models/apod.model';
 import { SpaceXService } from 'src/app/services/spacex.service';
 import { ApodService } from '../../services/apod.service'
 import { DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import { Youtuber } from 'src/app/models/youtuber.model';
+import { YoutuberMock } from 'src/app/mock/youtuber.mock';
 
 @Component({
     selector: 'index-page',
@@ -18,6 +20,7 @@ export class IndexComponent {
     exploreGallery: string[];
     launch: Launch;
     safeURL: SafeUrl;
+    youtubers: Youtuber[] = YoutuberMock
 
     constructor(private _spaceXService: SpaceXService, private router: Router, private _apodService: ApodService, private sanitizer: DomSanitizer) {
         this.launches = new Array<Launch>();

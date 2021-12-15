@@ -1,6 +1,5 @@
 import { Explore } from '../models/explore.model';
 
-//TODO: cargar data
 export const ExploreMock: Explore[] = [
     {
         id: 0,
@@ -92,6 +91,19 @@ export const ExploreMock: Explore[] = [
             "assets/img/nasaKids/3.png",
             "assets/img/nasaKids/4.png",
             "assets/img/nasaKids/5.png",
+        ]
+    },
+    {
+        id: 6,
+        name: 'In The Sky',
+        details: 'Calendario de eventos astronicos y novedades',
+        url: 'https://in-the-sky.org/',
+        banner: 'assets/img/inthesky/1.png',
+        images: [
+            "assets/img/inthesky/1.png", 
+            "assets/img/inthesky/2.png",
+            "assets/img/inthesky/3.png",
+            "assets/img/inthesky/4.png"
         ]
     }
 ]

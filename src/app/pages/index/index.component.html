@@ -70,3 +70,13 @@
         </button>
     </article>
 </section>
+
+<section class="youtubers semi-container">
+    <div class="container info">
+        <h2 class="h2 c-secondary-400">Divulgadores</h2>
+        <p> Explora el contenido de estos divulgadores cientificos para seguir aprendiendo de la mano de quienes saben. </p>
+    </div>
+    <div class="h-scroll semi-container grid">  
+        <youtuber-card *ngFor="let yt of youtubers" [youtuber]="yt"> </youtuber-card>    
+    </div>
+</section>
