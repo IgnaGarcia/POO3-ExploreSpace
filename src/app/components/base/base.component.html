@@ -16,11 +16,11 @@
 
         <div class="flex">
             <span *ngIf="base.launch_successes; else landing">
-                Taza de exito: {{getSuccessRate(base.launch_successes, base.launch_attempts)}}%
+                Tasa de éxito: {{getSuccessRate(base.launch_successes, base.launch_attempts)}}%
             </span>
             <ng-template #landing>
                 <span>
-                    Taza de exito: {{getSuccessRate(base.landing_successes, base.landing_attempts)}}%
+                    Tasa de éxito: {{getSuccessRate(base.landing_successes, base.landing_attempts)}}%
                 </span>
             </ng-template>
             <span></span>

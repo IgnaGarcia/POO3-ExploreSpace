@@ -4,7 +4,7 @@ export const YoutuberMock: Youtuber[] = [
     {
         id: 1,
         name: "CdeCiencia",
-        description: "Marti es un Geologo Español, gran precursor de la divulgacion cientifica a traves de las redes.",
+        description: "Marti es un Geólogo Español, gran precursor de la divulgación científica a través de las redes.",
         image: "assets/img/youtube/cdeciencia.jpg",
         youtube: "https://www.youtube.com/c/CdeCiencia",
         instagram: "https://www.instagram.com/cdeciencia_oficial/",
@@ -15,7 +15,7 @@ export const YoutuberMock: Youtuber[] = [
     {
         id: 2,
         name: "Date un Vlog",
-        description: "Javier es un Fisico Molecular Español, fue investigacion del CERN y es un enamorado de la ciencia y la divulgacion de esta.",
+        description: "Javier es un Físico Molecular Español, fue investigador del CERN y es un enamorado de la ciencia y la divulgación de esta.",
         image: "assets/img/youtube/dateunvlog.jpg",
         youtube: "https://www.youtube.com/c/DateunVlog",
         instagram: "https://www.instagram.com/jasantaolalla/",
@@ -26,7 +26,7 @@ export const YoutuberMock: Youtuber[] = [
     {
         id: 3,
         name: "El Robot de Platon",
-        description: "Aldo es un seguidor de la verdad y uno de los divulgadores con contenido mas variado.",
+        description: "Aldo es un seguidor de la verdad y uno de los divulgadores con contenido más variado.",
         image: "assets/img/youtube/robotdeplaton.png",
         youtube: "https://www.youtube.com/user/ElRobotdePlaton",
         instagram: "https://www.instagram.com/aldouscaldous/",

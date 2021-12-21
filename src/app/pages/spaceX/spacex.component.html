@@ -79,7 +79,7 @@
     <p class="container">{{company.summary}}</p>
     <ul class="container">
         <li>- Fundada en {{company.founded}} por <a href={{company.links.elon_twitter}}>{{company.founder}}</a></li>
-        <li>- Valuada en ${{company.valuation}} dolares</li>
+        <li>- Valuada en ${{company.valuation}} dólares</li>
         <li>- A cargo de {{company.employees}} empleados</li>
         <li>- Dirigida por
             {{company.ceo}}(CEO),
@@ -112,10 +112,10 @@
                 sistema en Marte. A mediano plazo se pretende que este proyecto genere ingresos para financiar el
                 proyecto de transporte de Marte.
             </p>
-            <p class="stat" *ngIf="activeStarlink != undefined"> <span>Satelites Activos:</span>
+            <p class="stat" *ngIf="activeStarlink != undefined"> <span>Satélites Activos:</span>
                 {{ activeStarlink.totalDocs }} ({{getActiveP()}}%)
             </p>
-            <p class="stat" *ngIf="inactiveStarlink != undefined"> <span>Satelites Inactivos:</span>
+            <p class="stat" *ngIf="inactiveStarlink != undefined"> <span>Satélites Inactivos:</span>
                 {{ inactiveStarlink.totalDocs }} ({{getInactiveP()}}%)
             </p>
         </div>
@@ -136,7 +136,7 @@
     </div>
 </section>
 <section>
-    <h2 class="container h2"> Capsolas Dragons </h2>
+    <h2 class="container h2"> Cápsulas Dragons </h2>
     <div class="card-list space-around">
         <dragon-card *ngFor="let dragon of dragons" [dragon]="dragon"></dragon-card>
     </div>

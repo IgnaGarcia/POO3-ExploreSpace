@@ -4,7 +4,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 0,
         name: 'Eyes - NASA',
-        details: 'Pagina de la NASA donde prodras explorar el universo a travez de los lentes de los satelites o visualizaciones en 3D.',
+        details: 'Página de la NASA donde podrás explorar el universo a través de los lentes de los satélites o visualizaciones en 3D.',
         url: 'https://eyes.nasa.gov',
         banner: "assets/img/eyes/eyes1.png",
         images: [
@@ -16,7 +16,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 1,
         name: '100000 Stars',
-        details: 'Maravilloso lugar para dar un recorrido a travez de la inmensidad de nuestra galaxia, la Via Lactea.',
+        details: 'Maravilloso lugar para dar un recorrido a través de la inmensidad de nuestra galaxia, la Vía Láctea.',
         url: 'https://stars.chromeexperiments.com',
         banner: "assets/img/100000stars/100000stars.png",
         images: [
@@ -29,7 +29,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 2,
         name: 'SpaceX',
-        details: 'Pagina oficial de la empresa privada SpaceX, donde sube noticias, informacion sobre las tecnologias que utiliza, sus misiones y demas contenido de interes.',
+        details: 'Página oficial de la empresa privada SpaceX, donde sube noticias, información sobre las tecnologías que utiliza, sus misiones y demás contenido de interés.',
         url: 'https://www.spacex.com/',
         banner: "assets/img/spaceX/spaceX4.png",
         images: [
@@ -42,7 +42,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 3,
         name: 'NASA',
-        details: 'Sitio oficial de la NASA, agencia de exploracion espacial con mas renombre.',
+        details: 'Sitio oficial de la NASA, agencia de exploración espacial con más renombre.',
         url: 'https://www.nasa.gov/',
         banner: 'assets/img/NASA/5.png',
         images: [
@@ -55,7 +55,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 4,
         name: 'La NASA Español',
-        details: 'Sitio de la NASA con traducciones al español, todas las novedades, eventos astronomicos, entrevistas y todo lo necesario para mantenerse al dia.',
+        details: 'Sitio de la NASA con traducciones al español, todas las novedades, eventos astronómicos, entrevistas y todo lo necesario para mantenerse al día.',
         url: 'https://www.lanasa.net/',
         banner: 'assets/img/nasaES/1.png',
         images: [
@@ -68,7 +68,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 5,
         name: 'SKY & TELESCOPE',
-        details: 'Blog de noticias interesantes, con tutoriales y herramientas utiles, todo orientado a la observacion del cielo y las extrellas.',
+        details: 'Blog de noticias interesantes, con tutoriales y herramientas útiles, todo orientado a la observación del cielo y las estrellas.',
         url: 'https://skyandtelescope.org/',
         banner: 'assets/img/skyTelescope/0.png',
         images: [
@@ -82,7 +82,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 6,
         name: 'NASA Kids',
-        details: 'Pagina super didactica llena de articulos y juegos para aprender jugando, ideal para infantes.',
+        details: 'Página súper didáctica llena de artículos y juegos para aprender jugando, ideal para infantes.',
         url: 'https://spaceplace.nasa.gov/sp/kids/',
         banner: 'assets/img/nasaKids/0.png',
         images: [
@@ -96,7 +96,7 @@ export const ExploreMock: Explore[] = [
     {
         id: 6,
         name: 'In The Sky',
-        details: 'Calendario de eventos astronicos y novedades',
+        details: 'Calendario de eventos astronómicos y novedades',
         url: 'https://in-the-sky.org/',
         banner: 'assets/img/inthesky/1.png',
         images: [
